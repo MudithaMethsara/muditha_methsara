@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedWolf | Methsara Kosgollawaththa - Cyber Developer</title>
+    <link rel="icon" href="assets/images/logoRounded.png">
+    <meta name="description" content="Portfolio of Methsara Kosgollawaththa (RedWolf) - Cyber Developer with a passion for futuristic web experiences">
+    <meta name="keywords" content="RedWolf, Methsara Kosgollawaththa, developer, portfolio, cyber, web developer">
+    <meta name="author" content="Methsara Kosgollawaththa">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://redwolf.dev/">
+    <meta property="og:title" content="RedWolf | Cyber Developer Portfolio">
+    <meta property="og:description" content="Futuristic web experiences crafted by Methsara Kosgollawaththa">
+    <meta property="og:image" content="https://redwolf.dev/assets/images/social-preview.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://redwolf.dev/">
+    <meta property="twitter:title" content="RedWolf | Cyber Developer Portfolio">
+    <meta property="twitter:description" content="Futuristic web experiences crafted by Methsara Kosgollawaththa">
+    <meta property="twitter:image" content="https://redwolf.dev/assets/images/social-preview.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="alternate icon" href="assets/images/favicon.ico">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            red: '#ff2a6d',
+                            dark: '#0d0221',
+                            blue: '#05d9e8',
+                            purple: '#d300c5',
+                            pink: '#ff2a6d',
+                            yellow: '#f9d423',
+                        },
+                    },
+                    fontFamily: {
+                        mono: ['JetBrains Mono', 'monospace'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'typing': 'typing 3.5s steps(40, end), blink-caret .75s step-end infinite',
+                        'blink-caret': 'blink-caret .75s step-end infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        glow: {
+                            'from': { 'text-shadow': '0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff2a6d, 0 0 20px #ff2a6d' },
+                            'to': { 'text-shadow': '0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff2a6d, 0 0 40px #ff2a6d' },
+                        },
+                        typing: {
+                            'from': { width: '0' },
+                            'to': { width: '100%' },
+                        },
+                        'blink-caret': {
+                            'from, to': { 'border-color': 'transparent' },
+                            '50%': { 'border-color': '#ff2a6d' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+<body class="antialiased">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 z-50 flex items-center justify-center bg-cyber-dark transition-opacity duration-500">
+        <div class="text-center">
+            <div class="inline-block animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-cyber-red mb-4"></div>
+            <h2 class="text-2xl font-mono font-bold text-cyber-red animate-pulse">REDWOLF</h2>
+            <p class="text-cyber-blue mt-2">Loading cyber systems...</p>
+        </div>
+    </div>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <header class="fixed w-full z-40 cyber-glass">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Brand Logo -->
+                <a href="#home" class="flex items-center space-x-2">
+                    <span class="text-2xl font-mono font-bold text-cyber-red">RED<span class="text-white">WOLF</span></span>
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-cyber-red focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-white hover:text-cyber-red transition">Home</a>
+                    <a href="#about" class="nav-link text-white hover:text-cyber-red transition">About</a>
+                    <a href="#skills" class="nav-link text-white hover:text-cyber-red transition">Skills</a>
+                    <a href="#projects" class="nav-link text-white hover:text-cyber-red transition">Projects</a>
+                    <a href="#contact" class="nav-link text-white hover:text-cyber-red transition">Contact</a>
+                    <button id="theme-toggle" class="text-cyber-red hover:text-cyber-blue transition">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 text-white hover:text-cyber-red transition">Home</a>
+                <a href="#about" class="block py-2 text-white hover:text-cyber-red transition">About</a>
+                <a href="#skills" class="block py-2 text-white hover:text-cyber-red transition">Skills</a>
+                <a href="#projects" class="block py-2 text-white hover:text-cyber-red transition">Projects</a>
+                <a href="#contact" class="block py-2 text-white hover:text-cyber-red transition">Contact</a>
+                <button id="theme-toggle-mobile" class="mt-2 text-cyber-red hover:text-cyber-blue transition">
+                    <i class="fas fa-moon"></i> Toggle Theme
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center pt-20">
+            <div class="container mx-auto px-6 py-20 md:py-32">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                            <span class="text-cyber-red">Hello,</span> I'm <span class="text-cyber-blue">Methsara</span>
+                        </h1>
+                        <div class="mb-6">
+                            <h2 class="text-2xl md:text-3xl font-mono text-cyber-purple">
+                                <span id="typing-text" class="typing-cursor"></span>
+                            </h2>
+                        </div>
+                        <p class="text-lg text-gray-300 mb-8 max-w-lg">
+                            Crafting futuristic digital experiences with cutting-edge web technologies. 
+                            I bridge the gap between design and functionality to create immersive cyber experiences.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#contact" class="cyber-button px-8 py-3 bg-cyber-red text-white rounded-md font-mono hover:bg-cyber-purple transition">
+                                Get In Touch
+                            </a>
+                            <a href="assets/resume.pdf" download class="cyber-button px-8 py-3 border border-cyber-red text-cyber-red rounded-md font-mono hover:bg-cyber-red hover:text-white transition">
+                                Download Resume
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+                        <div class="relative w-64 h-64 md:w-80 md:h-80">
+                            <div class="absolute inset-0 bg-cyber-red opacity-20 rounded-full blur-xl animate-pulse-slow"></div>
+                            <div class="relative w-full h-full rounded-full overflow-hidden border-4 border-cyber-red">
+                                <img src="assets/images/profile.jpg" alt="Methsara Kosgollawaththa" class="w-full h-full object-cover">
+                            </div>
+                            <div class="absolute -bottom-5 -right-5 bg-cyber-dark p-3 rounded-full border-2 border-cyber-blue">
+                                <div class="text-cyber-blue text-2xl animate-spin-slow">
+                                    <img src="assets/images/logoRounded.png" alt="" style="width: 50px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-cyber-dark">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        <span class="text-cyber-red">About</span> <span class="text-white">Me</span>
+                    </h2>
+                    <div class="w-20 h-1 bg-cyber-red mx-auto mb-6"></div>
+                    <p class="text-gray-400 max-w-2xl mx-auto">
+                        Who I am and what I do in the cyber world
+                    </p>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/3" data-aos="fade-right">
+                        <div class="cyber-card p-6 rounded-lg">
+                            <div class="text-cyber-red text-5xl mb-4">
+                                <i class="fas fa-user-secret"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Cyber Developer</h3>
+                            <p class="text-gray-400">
+                                Specializing in creating secure, high-performance web applications with futuristic aesthetics.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/3" data-aos="fade-up">
+                        <div class="cyber-card p-6 rounded-lg">
+                            <div class="text-cyber-blue text-5xl mb-4">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Code Artisan</h3>
+                            <p class="text-gray-400">
+                                Crafting clean, efficient, and maintainable code that stands the test of time.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/3" data-aos="fade-left">
+                        <div class="cyber-card p-6 rounded-lg">
+                            <div class="text-cyber-purple text-5xl mb-4">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Innovator</h3>
+                            <p class="text-gray-400">
+                                Constantly exploring new technologies and pushing the boundaries of web development.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1" data-aos="fade-right">
+                        <h3 class="text-2xl font-bold mb-6">
+                            The <span class="text-cyber-red">RedWolf</span> Story
+                        </h3>
+                        <p class="text-gray-400 mb-4">
+                            My journey into the digital realm began at a young age, fascinated by the endless possibilities of technology. 
+                            What started as a hobby quickly evolved into a passion for creating immersive web experiences.
+                        </p>
+                        <p class="text-gray-400 mb-4">
+                            Under the alias <span class="text-cyber-red font-mono">RedWolf</span>, I combine technical expertise with creative vision to build applications that are not only functional 
+                            but also visually striking and engaging.
+                        </p>
+                        <p class="text-gray-400">
+                            When I'm not coding, you can find me exploring the latest in cyber security, contributing to open-source projects, 
+                            or mentoring aspiring developers in the digital wilderness.
+                        </p>
+                    </div>
+                    
+                    <div class="order-1 md:order-2" data-aos="fade-left">
+                        <div class="relative">
+                            <div class="absolute -inset-4 bg-cyber-red opacity-20 rounded-xl blur-lg"></div>
+                            <div class="relative cyber-glass rounded-lg overflow-hidden">
+                                <img src="assets/images/about.png" alt="RedWolf at work" class="w-full h-auto">
+                                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-cyber-dark to-transparent p-6">
+                                    <h4 class="text-xl font-bold mb-2">Methsara Kosgollawaththa</h4>
+                                    <p class="text-cyber-red font-mono">Founder of RedWolf Dynamic & Cyber Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        My <span class="text-cyber-red">Skills</span>
+                    </h2>
+                    <div class="w-20 h-1 bg-cyber-red mx-auto mb-6"></div>
+                    <p class="text-gray-400 max-w-2xl mx-auto">
+                        The tools and technologies I wield to craft digital experiences
+                    </p>
+                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div data-aos="fade-right">
+                        <h3 class="text-2xl font-bold mb-6">
+                            Technical <span class="text-cyber-red">Expertise</span>
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-mono">HTML5 / CSS3</span>
+                                    <span class="text-cyber-red">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-mono">JavaScript (ES6+)</span>
+                                    <span class="text-cyber-red">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-mono">React.js</span>
+                                    <span class="text-cyber-red">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-mono">Node.js</span>
+                                    <span class="text-cyber-red">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-mono">Tailwind CSS</span>
+                                    <span class="text-cyber-red">92%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 92%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div data-aos="fade-left">
+                        <h3 class="text-2xl font-bold mb-6">
+                            Additional <span class="text-cyber-blue">Skills</span>
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-mono">UI/UX Design</span>
+                                    <span class="text-cyber-blue">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-mono">Cyber Security</span>
+                                    <span class="text-cyber-blue">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-mono">DevOps</span>
+                                    <span class="text-cyber-blue">70%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-mono">Project Management</span>
+                                    <span class="text-cyber-blue">82%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 82%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-mono">Technical Writing</span>
+                                    <span class="text-cyber-blue">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="mt-16" data-aos="fade-up">
+                    <h3 class="text-2xl font-bold mb-6 text-center">
+                        Tools & <span class="text-cyber-purple">Technologies</span>
+                    </h3>
+                    
+                    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6">
+                        <div class="cyber-card p-4 rounded-lg flex flex-col items-center justify-center hover:bg-cyber-dark transition">
+                            <i class="fab fa-html5 text-4xl text-orange-500 mb-2"></i>
+                            <span class="font-mono text-sm">HTML5</span>
+                        </div>
+                        
+                        <div class="cyber-card p-4 rounded-lg flex flex-col items-center justify-center hover:bg-cyber-dark transition">
+                            <i class="fab fa-css3-alt text-4xl text-blue-500 mb-2"></i>
+                            <span class="font-mono text-sm">CSS3</span>
+                        </div>
+                        
+                        <div class="cyber-card p-4 rounded-lg flex flex-col items-center justify-center hover:bg-cyber-dark transition">
+                            <i class="fab fa-js text-4xl text-yellow-400 mb-2"></i>
+                            <span class="font-mono text-sm">JavaScript</span>
+                        </div>
+                        
+                        <div class="cyber-card p-4 rounded-lg flex flex-col items-center justify-center hover:bg-cyber-dark transition">
+                            <i class="fab fa-react text-4xl text-cyan-400 mb-2"></i>
+                            <span class="font-mono text-sm">React</span>
+                        </div>
+                        
+                        <div class="cyber-card p-4 rounded-lg flex flex-col items-center justify-center hover:bg-cyber-dark transition">
+                            <i class="fab fa-node-js text-4xl text-green-500 mb-2"></i>
+                            <span class="font-mono text-sm">Node.js</span>
+                        </div>
+                        
+                        <div class="cyber-card p-4 rounded-lg flex flex-col items-center justify-center hover:bg-cyber-dark transition">
+                            <img src="https://img.icons8.com/?size=100&id=CIAZz2CYc6Kc&format=png&color=000000" alt="Tailwind CSS" class="w-8 h-8 mb-2">
+                            <span class="font-mono text-sm">Tailwind</span>
+                        </div>
+                        
+                        <div class="cyber-card p-4 rounded-lg flex flex-col items-center justify-center hover:bg-cyber-dark transition">
+                            <i class="fab fa-git-alt text-4xl text-orange-600 mb-2"></i>
+                            <span class="font-mono text-sm">Git</span>
+                        </div>
+                        
+                        <div class="cyber-card p-4 rounded-lg flex flex-col items-center justify-center hover:bg-cyber-dark transition">
+                            <i class="fab fa-github text-4xl text-gray-300 mb-2"></i>
+                            <span class="font-mono text-sm">GitHub</span>
+                        </div>
+                        
+                        <div class="cyber-card p-4 rounded-lg flex flex-col items-center justify-center hover:bg-cyber-dark transition">
+                            <i class="fab fa-figma text-4xl text-purple-500 mb-2"></i>
+                            <span class="font-mono text-sm">Figma</span>
+                        </div>
+                        
+                        <div class="cyber-card p-4 rounded-lg flex flex-col items-center justify-center hover:bg-cyber-dark transition">
+                            <i class="fas fa-server text-4xl text-green-400 mb-2"></i>
+                            <span class="font-mono text-sm">AWS</span>
+                        </div>
+                        
+                        <div class="cyber-card p-4 rounded-lg flex flex-col items-center justify-center hover:bg-cyber-dark transition">
+                            <i class="fas fa-database text-4xl text-blue-400 mb-2"></i>
+                            <span class="font-mono text-sm">MongoDB</span>
+                        </div>
+                        
+                        <div class="cyber-card p-4 rounded-lg flex flex-col items-center justify-center hover:bg-cyber-dark transition">
+                            <i class="fas fa-shield-alt text-4xl text-yellow-500 mb-2"></i>
+                            <span class="font-mono text-sm">Security</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <!-- <section id="projects" class="py-20 bg-cyber-dark">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        My <span class="text-cyber-red">Projects</span>
+                    </h2>
+                    <div class="w-20 h-1 bg-cyber-red mx-auto mb-6"></div>
+                    <p class="text-gray-400 max-w-2xl mx-auto">
+                        A selection of my recent work in the digital realm
+                    </p>
+                </div> -->
+                
+                <!-- Project Filters -->
+                <!-- <div class="flex justify-center mb-12" data-aos="fade-up">
+                    <div class="inline-flex flex-wrap justify-center gap-2 cyber-glass rounded-full p-1">
+                        <button class="project-filter px-4 py-2 rounded-full font-mono text-sm bg-cyber-red text-white" data-filter="all">
+                            All
+                        </button>
+                        <button class="project-filter px-4 py-2 rounded-full font-mono text-sm hover:bg-cyber-dark hover:text-cyber-red transition" data-filter="web">
+                            Web Apps
+                        </button>
+                        <button class="project-filter px-4 py-2 rounded-full font-mono text-sm hover:bg-cyber-dark hover:text-cyber-red transition" data-filter="mobile">
+                            Mobile
+                        </button>
+                        <button class="project-filter px-4 py-2 rounded-full font-mono text-sm hover:bg-cyber-dark hover:text-cyber-red transition" data-filter="design">
+                            UI/UX
+                        </button>
+                        <button class="project-filter px-4 py-2 rounded-full font-mono text-sm hover:bg-cyber-dark hover:text-cyber-red transition" data-filter="cyber">
+                            Cyber
+                        </button>
+                    </div>
+                </div> -->
+                
+                <!-- Projects Grid -->
+                <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> -->
+                    <!-- Project 1 -->
+                    <!-- <div class="project-item cyber-card rounded-lg overflow-hidden" data-category="web" data-aos="fade-up">
+                        <div class="relative overflow-hidden group">
+                            <img src="assets/images/project1.jpg" alt="Cyber Dashboard" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-cyber-dark to-transparent opacity-90 flex flex-col justify-end p-6">
+                                <h3 class="text-xl font-bold mb-2">Cyber Dashboard</h3>
+                                <p class="text-gray-300 text-sm mb-4">A futuristic admin dashboard with real-time analytics</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-cyber-dark text-cyber-red text-xs font-mono rounded">React</span>
+                                    <span class="px-2 py-1 bg-cyber-dark text-cyber-blue text-xs font-mono rounded">Tailwind</span>
+                                    <span class="px-2 py-1 bg-cyber-dark text-cyber-purple text-xs font-mono rounded">D3.js</span>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-70 transition-opacity duration-300">
+                                <a href="#" class="cyber-button px-6 py-2 bg-cyber-red text-white rounded-md font-mono hover:bg-cyber-purple transition mr-2">
+                                    View Project
+                                </a>
+                                <a href="#" class="cyber-button px-6 py-2 border border-cyber-red text-cyber-red rounded-md font-mono hover:bg-cyber-red hover:text-white transition">
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div> -->
+                    
+                    <!-- Project 2 -->
+                    <!-- <div class="project-item cyber-card rounded-lg overflow-hidden" data-category="mobile" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative overflow-hidden group">
+                            <img src="assets/images/project2.jpg" alt="Neon Wallet" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-cyber-dark to-transparent opacity-90 flex flex-col justify-end p-6">
+                                <h3 class="text-xl font-bold mb-2">Neon Wallet</h3>
+                                <p class="text-gray-300 text-sm mb-4">Cryptocurrency wallet app with biometric security</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-cyber-dark text-cyber-red text-xs font-mono rounded">Flutter</span>
+                                    <span class="px-2 py-1 bg-cyber-dark text-cyber-blue text-xs font-mono rounded">Dart</span>
+                                    <span class="px-2 py-1 bg-cyber-dark text-cyber-purple text-xs font-mono rounded">Blockchain</span>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-70 transition-opacity duration-300">
+                                <a href="#" class="cyber-button px-6 py-2 bg-cyber-red text-white rounded-md font-mono hover:bg-cyber-purple transition mr-2">
+                                    View Project
+                                </a>
+                                <a href="#" class="cyber-button px-6 py-2 border border-cyber-red text-cyber-red rounded-md font-mono hover:bg-cyber-red hover:text-white transition">
+                                    Code
+                                </a>
+                            </div>
+                        </div>
+                    </div> -->
+                    
+                    <!-- Project 3 -->
+                    <!-- <div class="project-item cyber-card rounded-lg overflow-hidden" data-category="design" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative overflow-hidden group">
+                            <img src="assets/images/project3.jpg" alt="Cyberpunk UI Kit" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-cyber-dark to-transparent opacity-90 flex flex-col justify-end p-6">
+                                <h3 class="text-xl font-bold mb-2">Cyberpunk UI Kit</h3>
+                                <p class="text-gray-300 text-sm mb-4">Futuristic design system for web applications</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-cyber-dark text-cyber-red text-xs font-mono rounded">Figma</span>
+                                    <span class="px-2 py-1 bg-cyber-dark text-cyber-blue text-xs font-mono rounded">UI Design</span>
+                                    <span class="px-2 py-1 bg-cyber-dark text-cyber-purple text-xs font-mono rounded">Design System</span>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-70 transition-opacity duration-300">
+                                <a href="#" class="cyber-button px-6 py-2 bg-cyber-red text-white rounded-md font-mono hover:bg-cyber-purple transition mr-2">
+                                    View Project
+                                </a>
+                                <a href="#" class="cyber-button px-6 py-2 border border-cyber-red text-cyber-red rounded-md font-mono hover:bg-cyber-red hover:text-white transition">
+                                    Download
+                                </a>
+                            </div>
+                        </div>
+                    </div> -->
+                    
+                    <!-- Project 4 -->
+                    <!-- <div class="project-item cyber-card rounded-lg overflow-hidden" data-category="cyber" data-aos="fade-up">
+                        <div class="relative overflow-hidden group">
+                            <img src="assets/images/project4.jpg" alt="Security Scanner" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-cyber-dark to-transparent opacity-90 flex flex-col justify-end p-6">
+                                <h3 class="text-xl font-bold mb-2">Security Scanner</h3>
+                                <p class="text-gray-300 text-sm mb-4">Web application vulnerability assessment tool</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-cyber-dark text-cyber-red text-xs font-mono rounded">Python</span>
+                                    <span class="px-2 py-1 bg-cyber-dark text-cyber-blue text-xs font-mono rounded">Django</span>
+                                    <span class="px-2 py-1 bg-cyber-dark text-cyber-purple text-xs font-mono rounded">Security</span>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-70 transition-opacity duration-300">
+                                <a href="#" class="cyber-button px-6 py-2 bg-cyber-red text-white rounded-md font-mono hover:bg-cyber-purple transition mr-2">
+                                    View Project
+                                </a>
+                                <a href="#" class="cyber-button px-6 py-2 border border-cyber-red text-cyber-red rounded-md font-mono hover:bg-cyber-red hover:text-white transition">
+                                    Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div> -->
+                    
+                    <!-- Project 5 -->
+                    <!-- <div class="project-item cyber-card rounded-lg overflow-hidden" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative overflow-hidden group">
+                            <img src="assets/images/project5.jpg" alt="AR Portfolio" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-cyber-dark to-transparent opacity-90 flex flex-col justify-end p-6">
+                                <h3 class="text-xl font-bold mb-2">AR Portfolio</h3>
+                                <p class="text-gray-300 text-sm mb-4">Interactive augmented reality portfolio experience</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-cyber-dark text-cyber-red text-xs font-mono rounded">Three.js</span>
+                                    <span class="px-2 py-1 bg-cyber-dark text-cyber-blue text-xs font-mono rounded">WebXR</span>
+                                    <span class="px-2 py-1 bg-cyber-dark text-cyber-purple text-xs font-mono rounded">AR</span>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-70 transition-opacity duration-300">
+                                <a href="#" class="cyber-button px-6 py-2 bg-cyber-red text-white rounded-md font-mono hover:bg-cyber-purple transition mr-2">
+                                    View Project
+                                </a>
+                                <a href="#" class="cyber-button px-6 py-2 border border-cyber-red text-cyber-red rounded-md font-mono hover:bg-cyber-red hover:text-white transition">
+                                    Try AR
+                                </a>
+                            </div>
+                        </div>
+                    </div> -->
+                    
+                    <!-- Project 6 -->
+                    <!-- <div class="project-item cyber-card rounded-lg overflow-hidden" data-category="design" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative overflow-hidden group">
+                            <img src="assets/images/project6.jpg" alt="HUD Interface" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-cyber-dark to-transparent opacity-90 flex flex-col justify-end p-6">
+                                <h3 class="text-xl font-bold mb-2">HUD Interface</h3>
+                                <p class="text-gray-300 text-sm mb-4">Heads-up display concept for automotive applications</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-cyber-dark text-cyber-red text-xs font-mono rounded">After Effects</span>
+                                    <span class="px-2 py-1 bg-cyber-dark text-cyber-blue text-xs font-mono rounded">UI Design</span>
+                                    <span class="px-2 py-1 bg-cyber-dark text-cyber-purple text-xs font-mono rounded">Motion</span>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-70 transition-opacity duration-300">
+                                <a href="#" class="cyber-button px-6 py-2 bg-cyber-red text-white rounded-md font-mono hover:bg-cyber-purple transition mr-2">
+                                    View Project
+                                </a>
+                                <a href="#" class="cyber-button px-6 py-2 border border-cyber-red text-cyber-red rounded-md font-mono hover:bg-cyber-red hover:text-white transition">
+                                    Watch Video
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12" data-aos="fade-up">
+                    <a href="https://github.com/MudithaMethsara?tab=repositories" class="cyber-button inline-flex items-center px-8 py-3 border border-cyber-red text-cyber-red rounded-md font-mono hover:bg-cyber-red hover:text-white transition">
+                        View All Projects
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        Get In <span class="text-cyber-red">Touch</span>
+                    </h2>
+                    <div class="w-20 h-1 bg-cyber-red mx-auto mb-6"></div>
+                    <p class="text-gray-400 max-w-2xl mx-auto">
+                        Have a project in mind or want to discuss potential opportunities? Reach out to me!
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div data-aos="fade-right">
+                        <h3 class="text-2xl font-bold mb-6">
+                            Contact <span class="text-cyber-red">Information</span>
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-cyber-red text-xl mr-4 mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Email</h4>
+                                    <a href="mailto:contact@redwolf.dev" class="text-gray-400 hover:text-cyber-red transition">contact@redwolf.dev</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-cyber-blue text-xl mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Location</h4>
+                                    <p class="text-gray-400">Colombo, Sri Lanka</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-cyber-purple text-xl mr-4 mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Phone</h4>
+                                    <a href="tel:+94771234567" class="text-gray-400 hover:text-cyber-purple transition">+94 77 123 4567</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-cyber-yellow text-xl mr-4 mt-1">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Availability</h4>
+                                    <p class="text-gray-400">Monday - Friday: 9AM - 5PM</p>
+                                    <p class="text-gray-400">Weekends: By appointment</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-4">Follow Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-gray-400 hover:text-cyber-red transition text-xl">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-cyber-blue transition text-xl">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-cyber-purple transition text-xl">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-cyber-red transition text-xl">
+                                    <i class="fab fa-dribbble"></i>
+                                </a>
+                                <a href="#" class="text-gray-400 hover:text-cyber-yellow transition text-xl">
+                                    <i class="fab fa-stack-overflow"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div data-aos="fade-left">
+                        <form id="contact-form" class="cyber-glass p-8 rounded-lg">
+                            <div class="mb-6">
+                                <label for="name" class="block text-sm font-mono mb-2">Your Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-cyber-dark border border-gray-700 rounded-md focus:outline-none focus:border-cyber-red transition" required>
+                                <div id="name-error" class="text-red-500 text-xs mt-1 hidden">Please enter your name</div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="email" class="block text-sm font-mono mb-2">Your Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-cyber-dark border border-gray-700 rounded-md focus:outline-none focus:border-cyber-red transition" required>
+                                <div id="email-error" class="text-red-500 text-xs mt-1 hidden">Please enter a valid email</div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="subject" class="block text-sm font-mono mb-2">Subject</label>
+                                <input type="text" id="subject" name="subject" class="w-full px-4 py-3 bg-cyber-dark border border-gray-700 rounded-md focus:outline-none focus:border-cyber-red transition" required>
+                                <div id="subject-error" class="text-red-500 text-xs mt-1 hidden">Please enter a subject</div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-sm font-mono mb-2">Your Message</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 bg-cyber-dark border border-gray-700 rounded-md focus:outline-none focus:border-cyber-red transition" required></textarea>
+                                <div id="message-error" class="text-red-500 text-xs mt-1 hidden">Please enter your message</div>
+                            </div>
+                            
+                            <button type="submit" class="cyber-button w-full px-6 py-3 bg-cyber-red text-white rounded-md font-mono hover:bg-cyber-purple transition">
+                                Send Message
+                                <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                            
+                            <div id="form-success" class="mt-4 p-3 bg-green-900 text-green-300 rounded-md hidden">
+                                <i class="fas fa-check-circle mr-2"></i>
+                                Your message has been sent successfully!
+                            </div>
+                            
+                            <div id="form-error" class="mt-4 p-3 bg-red-900 text-red-300 rounded-md hidden">
+                                <i class="fas fa-exclamation-circle mr-2"></i>
+                                There was an error sending your message. Please try again later.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 cyber-glass">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#home" class="flex items-center space-x-2">
+                        <span class="text-2xl font-mono font-bold text-cyber-red">RED<span class="text-white">WOLF</span></span>
+                    </a>
+                    <p class="text-gray-400 mt-2 text-sm">
+                        Crafting the future, one line of code at a time.
+                    </p>
+                </div>
+                
+                <div class="flex flex-col items-center md:items-end">
+                    <div class="flex space-x-6 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-cyber-red transition">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-cyber-blue transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-cyber-purple transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-cyber-red transition">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </div>
+                    
+                    <p class="text-gray-500 text-sm">
+                        &copy; <span id="year"></span> Methsara Kosgollawaththa. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-cyber-red text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Particles JS -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
