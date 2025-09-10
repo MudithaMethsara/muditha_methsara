@@ -65,28 +65,35 @@
         } */
 
         .skill-bar {
-  position: relative;      /* required for absolute child */
-  width: 100%;
-  height: 6px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 3px;
-  overflow: hidden;
-  direction: ltr;          /* ensure container is LTR */
-}
+            position: relative;
+            /* required for absolute child */
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+            direction: ltr;
+            /* ensure container is LTR */
+        }
 
-.skill-progress {
-  position: absolute;      /* anchor to left with left:0 */
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 0;                /* start collapsed at 0 */
-  height: 100%;
-  border-radius: 3px 0 0 3px;   /* round left side while filling */
-  background: linear-gradient(90deg, #ff2a6d, #d300c5);
-  transition: width 1.5s cubic-bezier(.2,.9,.2,1);
-  transform-origin: left center; /* grow from LEFT */
-  transform: none !important;    /* cancel any inherited flips */
-}
+        .skill-progress {
+            position: absolute;
+            /* anchor to left with left:0 */
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 0;
+            /* start collapsed at 0 */
+            height: 100%;
+            border-radius: 3px 0 0 3px;
+            /* round left side while filling */
+            background: linear-gradient(90deg, #ff2a6d, #d300c5);
+            transition: width 1.5s cubic-bezier(.2, .9, .2, 1);
+            transform-origin: left center;
+            /* grow from LEFT */
+            transform: none !important;
+            /* cancel any inherited flips */
+        }
 
         .nav-link {
             position: relative;
