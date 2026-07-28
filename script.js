@@ -237,32 +237,40 @@ document.addEventListener('DOMContentLoaded', () => {
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
         if (!prefersReducedMotion) {
-            // Hero Load Sequence
-            const heroTitle = document.querySelector('.hero-title');
-            if (heroTitle) {
-                const tl = gsap.timeline();
-                tl.fromTo(heroTitle, 
-                    { opacity: 0, y: 30, scale: 0.95 },
-                    { opacity: 1, y: 0, scale: 1, duration: 1, ease: 'expo.out', delay: 0.2 }
-                )
-                .fromTo('.hero-desc',
-                    { opacity: 0, y: 20 },
-                    { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
-                    "-=0.6"
-                )
-                .fromTo('.hero .btn',
-                    { opacity: 0, y: 10 },
-                    { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' },
-                    "-=0.4"
-                );
+            // Text Wrap Utility for Revealing
+            function wrapText(selector) {
+                document.querySelectorAll(selector).forEach(el => {
+                    const words = el.innerText.split(' ');
+                    el.innerHTML = '';
+                    words.forEach(word => {
+                        const mask = document.createElement('span');
+                        mask.className = 'reveal-mask';
+                        mask.innerHTML = `<span class="reveal-text">${word}&nbsp;</span>`;
+                        el.appendChild(mask);
+                    });
+                });
             }
+
+            wrapText('.hero-title, .page-header, .section-header h2');
+
+            // Global Load Sequence
+            const tl = gsap.timeline();
+            tl.fromTo('.navbar', { y: -100, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power3.out' })
+              .fromTo('.logo', { x: -50, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: 'power3.out' }, "-=0.8")
+              .fromTo('.sidebar-left', { x: -50, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: 'power3.out' }, "-=0.8")
+              .fromTo('.header-cta', { x: 50, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: 'power3.out' }, "-=0.8")
+              .fromTo('.reveal-text', 
+                  { yPercent: 100 },
+                  { yPercent: 0, duration: 1.2, stagger: 0.05, ease: 'power4.out' },
+                  "-=0.6"
+              )
+              .fromTo('.hero-desc', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8 }, "-=0.8")
+              .fromTo('.hero .btn', { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.6, ease: 'back.out(1.5)' }, "-=0.6");
 
             // Scroll Reveals (replacing simple fade-in-up)
             const fadeElements = document.querySelectorAll('.fade-in-up');
             fadeElements.forEach(el => {
-                // Remove the CSS transition class so GSAP handles it
                 el.classList.remove('fade-in-up');
-                
                 gsap.fromTo(el,
                     { opacity: 0, y: 40 },
                     {
@@ -279,16 +287,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 );
             });
 
-            // Grid Stagger Reveal
+            // Grid Stagger & 3D Cards
             const grids = document.querySelectorAll('.grid-2, .grid-3');
             grids.forEach(grid => {
                 const cards = grid.querySelectorAll('.card');
                 gsap.fromTo(cards,
-                    { opacity: 0, y: 30 },
+                    { opacity: 0, y: 50 },
                     {
                         opacity: 1,
                         y: 0,
-                        stagger: 0.15,
+                        stagger: 0.1,
                         duration: 0.8,
                         ease: 'power3.out',
                         scrollTrigger: {
@@ -297,6 +305,26 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     }
                 );
+
+                cards.forEach(card => {
+                    // Parallax Image inside Card
+                    const img = card.querySelector('.card-img');
+                    
+                    if (img) {
+                        gsap.to(img, {
+                            scale: 1.15,
+                            ease: "none",
+                            scrollTrigger: {
+                                trigger: card,
+                                start: "top bottom",
+                                end: "bottom top",
+                                scrub: true
+                            }
+                        });
+                    }
+
+
+                });
             });
         }
     }
@@ -469,10 +497,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Marquee duplication
-    const marquees = document.querySelectorAll('.marquee-content');
-    marquees.forEach(marquee => {
-        const content = marquee.innerHTML;
-        marquee.innerHTML = content + '&nbsp;&nbsp;&nbsp;&nbsp;' + content + '&nbsp;&nbsp;&nbsp;&nbsp;' + content;
+    // GSAP Scroll-Driven Marquee
+    const marquees = document.querySelectorAll('.marquee-container');
+    marquees.forEach(container => {
+        const content = container.querySelector('.marquee-content');
+        if (content && typeof gsap !== 'undefined') {
+            // Duplicate content for seamless loop
+            content.innerHTML = content.innerHTML + content.innerHTML;
+            
+            let proxy = { skew: 0 };
+            let skewSetter = gsap.quickSetter(content, "skewX", "deg");
+            let clamp = gsap.utils.clamp(-15, 15);
+            
+            ScrollTrigger.create({
+                onUpdate: (self) => {
+                    let skew = clamp(self.getVelocity() / -100);
+                    if (Math.abs(skew) > Math.abs(proxy.skew)) {
+                        proxy.skew = skew;
+                        gsap.to(proxy, {skew: 0, duration: 0.8, ease: "power3", overwrite: true, onUpdate: () => skewSetter(proxy.skew)});
+                    }
+                }
+            });
+            
+            gsap.set(content, {transformOrigin: "center center", force3D: true});
+            
+            // Continuous loop
+            gsap.to(content, {
+                xPercent: -50,
+                ease: "none",
+                duration: 25,
+                repeat: -1
+            });
+        }
     });
 });
