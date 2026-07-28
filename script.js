@@ -25,6 +25,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
         gsap.registerPlugin(ScrollTrigger);
     }
+    
+    // 1.5 Signature Loader Animation
+    const loader = document.getElementById('loader');
+    if (loader) {
+        const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/');
+        if (isHomePage || !sessionStorage.getItem('loaderPlayed')) {
+            // First time visit or on homepage: play animation
+            setTimeout(() => {
+                loader.classList.add('hidden');
+                sessionStorage.setItem('loaderPlayed', 'true');
+            }, 3000); // Wait 3 seconds for animation to complete
+        } else {
+            // Already played: hide instantly without animation
+            loader.style.display = 'none';
+        }
+    }
 
     // 2. Custom Cursor & Magnetic Hover
     const isTouch = window.matchMedia("(pointer: coarse)").matches;

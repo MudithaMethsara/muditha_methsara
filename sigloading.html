@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RedWolf Signature Loader</title>
+<style>
+  @font-face {
+    font-family: 'Bastliga One';
+    src: url('BastligaOne.woff2') format('woff2'),
+         url('BastligaOne.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0A0A0A;
+    margin: 0;
+  }
+
+  .signature-loader {
+    font-family: 'Bastliga One', cursive, sans-serif;
+    font-size: 5rem;
+    color: #DC143C; 
+    white-space: nowrap; 
+    
+    /* Added padding to the container to ensure the sweeping tail of the 'f' has physical room on the screen */
+    padding-right: 1em; 
+    
+    animation: loader-pulse 4s infinite; 
+  }
+
+  .signature-loader span {
+    display: inline;
+    opacity: 0; 
+    
+    /* 
+      Ease-in-out simulates the acceleration and deceleration of a real hand moving a pencil.
+      We now pull the duration (--s) and delay (--d) directly from the HTML to customize each letter.
+    */
+    animation: write-stroke var(--s) ease-in-out forwards;
+    animation-delay: var(--d);
+  }
+
+  /* 
+    Expanded the boundaries to -200% so the clip-path is massively larger than the letters.
+    This guarantees the top loops and the long tail of the 'f' will never be sliced off.
+  */
+  @keyframes write-stroke {
+    0% {
+      opacity: 0;
+      clip-path: inset(-200% 100% -200% -200%);
+    }
+    1% {
+      opacity: 1;
+      clip-path: inset(-200% 100% -200% -200%);
+    }
+    100% {
+      opacity: 1;
+      clip-path: inset(-200% -200% -200% -200%); 
+    }
+  }
+
+  @keyframes loader-pulse {
+    0%, 75% { opacity: 1; filter: drop-shadow(0 0 5px rgba(220, 20, 60, 0.4)); }
+    90%, 100% { opacity: 0; filter: drop-shadow(0 0 0px rgba(220, 20, 60, 0)); }
+  }
+</style>
+</head>
+<body>
+
+  <!-- 
+    --d = Delay (when the pen starts writing this letter)
+    --s = Speed/Duration (how long it takes to write this letter)
+    
+    Notice how 'R' and 'W' take longer (0.6s/0.7s) than 'e' or 'o' (0.3s).
+    Notice how the delays slightly overlap so the pen flows continuously.
+    The last span ('f') has physical padding added so the browser doesn't chop its tail.
+  -->
+  <div class="signature-loader" id="loader">
+    <span style="--d: 0s;   --s: 0.6s;">R</span><span 
+          style="--d: 0.5s; --s: 0.3s;">e</span><span 
+          style="--d: 0.7s; --s: 0.4s;">d</span><span 
+          style="--d: 1.0s; --s: 0.7s;">W</span><span 
+          style="--d: 1.6s; --s: 0.3s;">o</span><span 
+          style="--d: 1.8s; --s: 0.4s;">l</span><span 
+          style="--d: 2.1s; --s: 0.6s; padding-right: 1em;">f</span>
+  </div>
+
+  <script>
+    const loader = document.getElementById('loader');
+    setInterval(() => {
+      loader.style.display = 'none';
+      void loader.offsetWidth; 
+      loader.style.display = 'block';
+    }, 4000); // Increased to 4 seconds to accommodate the realistic typing speeds
+  </script>
+
+</body>
+</html>
