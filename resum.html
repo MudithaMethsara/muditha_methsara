@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muditha Methsara | REDWOLF — Executive Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@300;400;500;600;700;800&family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --clr-red: #DC143C;
+      --clr-red-glow: rgba(220, 20, 60, 0.15);
+      --clr-bg-base: #090000;
+      --clr-bg-surface: #120000;
+      --clr-text-primary: #1b1f2a;
+      --clr-text-muted: #444;
+      --clr-white: #ffffff;
+      --font-display: 'Orbitron', sans-serif;
+      --font-terminal: 'Share Tech Mono', monospace;
+      --font-body: 'Rajdhani', sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { 
+      margin: 0; 
+      padding: 0; 
+      background: #f0f2f5; 
+      color: var(--clr-text-primary); 
+      font-family: 'Inter', sans-serif;
+      line-height: 1.5;
+    }
+
+    /* BACKGROUND MOTIF */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 60 L60 60 L60 0' fill='none' stroke='%23DC143C' stroke-opacity='0.03' stroke-width='1'/%3E%3C/svg%3E");
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 0;
+      background: var(--clr-white);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      background: var(--clr-bg-base);
+      color: var(--clr-white);
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+
+    .hero {
+      text-align: center;
+      position: relative;
+      padding-bottom: 30px;
+      border-bottom: 1px solid rgba(220, 20, 60, 0.2);
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 20px;
+      border: 3px solid var(--clr-red);
+      clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+      padding: 5px;
+      background: var(--clr-bg-surface);
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+    }
+
+    .name {
+      font-family: var(--font-display);
+      font-size: 1.7rem;
+      color: var(--clr-red);
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .alias {
+      font-family: var(--font-terminal);
+      font-size: 0.8rem;
+      color: var(--clr-white);
+      opacity: 0.6;
+      letter-spacing: 4px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      color: var(--clr-red);
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(220, 20, 60, 0.3);
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 15px;
+      font-size: 0.85rem;
+    }
+
+    .contact-item strong {
+      display: block;
+      color: var(--clr-red);
+      font-family: var(--font-terminal);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+
+    .contact-item a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contact-item a:hover { color: var(--clr-red); }
+
+    .skill-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .skill-bar-item {
+      font-size: 0.8rem;
+    }
+
+    .skill-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+      font-family: var(--font-terminal);
+    }
+
+    .bar-bg {
+      height: 4px;
+      background: rgba(255,255,255,0.1);
+      position: relative;
+    }
+
+    .bar-fill {
+      position: absolute;
+      height: 100%;
+      background: var(--clr-red);
+      box-shadow: 0 0 10px var(--clr-red);
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .badge {
+      background: #1a0000;
+      border: 1px solid #330000;
+      padding: 4px 10px;
+      font-size: 0.7rem;
+      font-family: var(--font-terminal);
+      color: #ccc;
+    }
+
+    /* MAIN CONTENT */
+    .main {
+      padding: 50px;
+      background: #fff;
+    }
+
+    .main-header {
+      margin-bottom: 40px;
+    }
+
+    .role-title {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #111;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+
+    .meta-strip {
+      display: flex;
+      gap: 25px;
+      font-family: var(--font-terminal);
+      font-size: 0.8rem;
+      color: var(--clr-text-muted);
+      text-transform: uppercase;
+    }
+
+    .meta-strip b { color: var(--clr-red); }
+
+    .summary-box {
+      background: #fff;
+      border-left: 4px solid var(--clr-red);
+      padding: 25px;
+      margin-bottom: 40px;
+      position: relative;
+      background-image: linear-gradient(to right, #fff5f5, #fff);
+    }
+
+    .summary-box p {
+      margin: 0;
+      font-family: var(--font-body);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .block-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .block-title .slash { color: var(--clr-red); }
+
+    .impact-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .impact-list li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .impact-list li::before {
+      content: '>';
+      position: absolute;
+      left: 0;
+      color: var(--clr-red);
+      font-family: var(--font-terminal);
+      font-weight: 900;
+    }
+
+    .experience-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .exp-item {
+      position: relative;
+      padding-left: 30px;
+      border-left: 1px solid #eee;
+    }
+
+    .exp-item::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 5px;
+      width: 9px;
+      height: 9px;
+      background: var(--clr-red);
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+    }
+
+    .exp-role {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: #111;
+    }
+
+    .exp-company {
+      font-family: var(--font-terminal);
+      color: var(--clr-red);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .exp-date {
+      font-family: var(--font-terminal);
+      font-size: 0.8rem;
+      color: #999;
+    }
+
+    .exp-desc {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .edu-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .footer {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px dashed #ddd;
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-terminal);
+      font-size: 0.75rem;
+      color: #aaa;
+    }
+
+    /* UTILITIES */
+    .text-red { color: var(--clr-red); }
+
+    /* PRINT OPTIMIZATION */
+    @media print {
+      body { background: white; }
+      .page { margin: 0; box-shadow: none; border-radius: 0; grid-template-columns: 280px 1fr; }
+      .sidebar { background: #000 !important; }
+      .summary-box { background: #fff !important; border: 1px solid #ddd; }
+      .bar-bg { background: #eee !important; }
+      .bar-fill { background: #000 !important; }
+    }
+
+    @media (max-width: 900px) {
+      .page { grid-template-columns: 1fr; }
+      .sidebar { padding: 40px; }
+      .content-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page" role="document">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="hero">
+        <div class="profile-pic">
+          <img src="assets/images/profile.jpg" alt="Muditha Methsara">
+        </div>
+        <h2 class="name">M. Methsara</h2>
+        <div class="alias">REDWOLF_EXECUTOR</div>
+      </div>
+
+      <section>
+        <h3 class="section-title">Connectivity</h3>
+        <div class="contact-list">
+          <div class="contact-item">
+            <div><strong>Direct Link</strong><a href="tel:+94726125275">+94 72 612 5275</a> [WhatsApp]</div>
+          </div>
+          <div class="contact-item">
+            <div><strong>Email</strong><a href="mailto:infomudithamethsara@gmail.com">infomudithamethsara@gmail.com</a></div>
+          </div>
+          <div class="contact-item">
+            <div><strong>Professional</strong><a href="https://www.linkedin.com/in/muditha-methsara-189a07230/" target="_blank">linkedin.com/in/muditha-methsara</a></div>
+          </div>
+          <div class="contact-item">
+            <div><strong>Technical X</strong><a href="https://x.com/M_Methsara_RW" target="_blank">@M_Methsara_RW</a></div>
+          </div>
+          <div class="contact-item">
+            <div><strong>Steam Gaming</strong><a href="https://steamcommunity.com/id/red_wolf_mudithamethsara/" target="_blank">red_wolf_mudithamethsara</a></div>
+          </div>
+          <div class="contact-item">
+            <div><strong>Discord</strong>muditha_methsara</div>
+          </div>
+          <div class="contact-item">
+            <div><strong>Intelligence</strong><a href="https://github.com/MudithaMethsara" target="_blank">github.com/MudithaMethsara</a></div>
+          </div>
+          <div class="contact-item">
+            <div><strong>Location</strong>Nittambuwa, Sri Lanka [6.0° N, 80.0° E]</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3 class="section-title">Core Logic</h3>
+        <div class="skill-bars">
+          <div class="skill-bar-item">
+            <div class="skill-label"><span>Back-End Architecture</span><span>95%</span></div>
+            <div class="bar-bg"><div class="bar-fill" style="width: 95%;"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-label"><span>Operational Strategy</span><span>90%</span></div>
+            <div class="bar-bg"><div class="bar-fill" style="width: 90%;"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-label"><span>AI / System Logic</span><span>85%</span></div>
+            <div class="bar-bg"><div class="bar-fill" style="width: 85%;"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3 class="section-title">Technological Stack</h3>
+        <div class="badges">
+          <span class="badge">JAVA / SPRING BOOT</span>
+          <span class="badge">PYTHON</span>
+          <span class="badge">NODE.JS</span>
+          <span class="badge">REACT</span>
+          <span class="badge">MYSQL / MONGODB</span>
+          <span class="badge">DOCKER</span>
+          <span class="badge">AWS</span>
+          <span class="badge">LINUX [ROOT]</span>
+          <span class="badge">REST API / JWT</span>
+          <span class="badge">GIT FLOW</span>
+        </div>
+      </section>
+
+      <section>
+        <h3 class="section-title">Verified Certs</h3>
+        <div class="contact-list">
+          <div class="contact-item" style="margin-bottom: 8px;">
+            <div style="font-size: 0.8rem;">• Cyber-Security Introduction</div>
+          </div>
+          <div class="contact-item" style="margin-bottom: 8px;">
+            <div style="font-size: 0.8rem;">• OPSWAT ICIP [Critical Infra]</div>
+          </div>
+          <div class="contact-item" style="margin-bottom: 8px;">
+            <div style="font-size: 0.8rem;">• Linux LFS101 Foundation</div>
+          </div>
+        </div>
+      </section>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <header class="main-header">
+        <h1 class="role-title">Chief Operating Officer <span class="text-red">&</span> Back-End Architect</h1>
+        <div class="meta-strip">
+          <div>Experience: <b>03+ CYCLES</b></div>
+          <div>Focus: <b>SCALABLE_AI_INFRA</b></div>
+          <div>Status: <b>EXECUTIVE_ACTIVE</b></div>
+        </div>
+      </header>
+
+      <div class="summary-box">
+        <p>
+          Visionary Software Engineer and Technical Executive. As **Co-Founder & COO of Sivion AI**, I orchestrate the synergy between complex AI architectures and enterprise-level operations. Expert in forging secure, high-concurrency back-end systems that drive the future of digital automation.
+        </p>
+      </div>
+
+      <div class="content-grid">
+        <section>
+          <h2 class="block-title"><span class="slash">//</span> IMPACT</h2>
+          <ul class="impact-list">
+            <li>Spearheading operational workflows for **Sivion AI** projects.</li>
+            <li>Engineered **enterprise-grade API frameworks** with 99.9% uptime.</li>
+            <li>Optimized database schemas for **Inventory & Revenue** systems.</li>
+            <li>Leading cross-functional engineering teams in agile environments.</li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="block-title"><span class="slash">//</span> EXPERTISE</h2>
+          <ul class="impact-list">
+            <li>Scalable Microservices (Spring Boot / Java).</li>
+            <li>Technical Roadmap & Strategic Leadership.</li>
+            <li>End-to-End Encryption & Security Auditing.</li>
+            <li>Cloud-Native Orchestration & CI/CD Pipelines.</li>
+          </ul>
+        </section>
+      </div>
+
+      <section style="margin-bottom: 40px;">
+        <h2 class="block-title"><span class="slash">//</span> LEADERSHIP & EXPERIENCE</h2>
+        <div class="experience-timeline">
+          <div class="exp-item">
+            <div class="exp-header">
+              <div>
+                <div class="exp-role">Co-Founder & Chief Operating Officer</div>
+                <div class="exp-company">Sivion AI</div>
+              </div>
+              <div class="exp-date">2024 — PRESENT</div>
+            </div>
+            <div class="exp-desc">
+              Directing technical operations and strategic direction. Bridging business goals with high-level engineering to deploy AI-integrated enterprise solutions.
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <div>
+                <div class="exp-role">Senior Back-End Architect</div>
+                <div class="exp-company">RedWolf Independent</div>
+              </div>
+              <div class="exp-date">2022 — 2024</div>
+            </div>
+            <div class="exp-desc">
+              Designed and deployed robust systems including Civitech_IMS and Hexcore. Specialized in Java, Spring Boot, and secure data processing pipelines.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="block-title"><span class="slash">//</span> ACADEMIC FOUNDATION</h2>
+        <div class="experience-timeline">
+          <div class="exp-item">
+            <div class="exp-header">
+              <div>
+                <div class="exp-role">BEng(Hons) Software Engineering</div>
+                <div class="exp-company">Java Institute for Advanced Technology</div>
+              </div>
+              <div class="exp-date">2022 — PRESENT</div>
+            </div>
+            <div class="exp-desc">
+              Deep-dive into Enterprise Systems, Discrete Mathematics, and Distributed Computing architectures.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <a href="index.html" style="color: var(--clr-red); font-weight: 700;">[< RETURN_TO_SYSTEM ]</a>
+        <span>REDWOLF_SYSTEM_VERIFY: [PASS]</span>
+        <span>SIG: M_METH_KOSGOLLAWATHTHA</span>
+        <span>UPDATED: 2025.04.26</span>
+      </footer>
+    </main>
+  </div>
+
+</body>
+</html>
