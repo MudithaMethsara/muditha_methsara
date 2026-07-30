@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
         gsap.registerPlugin(ScrollTrigger);
     }
-    
+
     // 1.5 Signature Loader Animation
     const loader = document.getElementById('loader');
     if (loader) {
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const v = rect.height / 2;
                 const x = e.clientX - rect.left - h;
                 const y = e.clientY - rect.top - v;
-                
+
                 // Pull element slightly towards cursor
                 gsap.to(el, {
                     x: x * 0.3,
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let mouse = { x: null, y: null };
         const NODE_COUNT = 80;
         const CONNECTION_DIST = 150;
-        
+
         // CSS Style for canvas
         canvas.style.position = 'absolute';
         canvas.style.top = '0';
@@ -163,19 +163,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function draw() {
             ctx.clearRect(0, 0, width, height);
-            
+
             // Get scroll offset for parallax
             const scrollY = window.scrollY || 0;
-            
+
             ctx.lineWidth = 1;
 
             for (let i = 0; i < nodes.length; i++) {
                 const node = nodes[i];
-                
+
                 // Update pos
                 node.x += node.vx;
                 node.y += node.vy;
-                
+
                 // Bounds
                 if (node.x < 0 || node.x > width) node.vx *= -1;
                 if (node.y < 0 || node.y > height) node.vy *= -1;
@@ -188,26 +188,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (mouse.x !== null) {
                     const dx = mouse.x - node.x;
                     const dy = mouse.y - py; // use screen Y for mouse
-                    distToMouse = Math.sqrt(dx*dx + dy*dy);
+                    distToMouse = Math.sqrt(dx * dx + dy * dy);
                 }
 
                 // Draw connections
                 for (let j = i + 1; j < nodes.length; j++) {
                     const node2 = nodes[j];
                     const py2 = node2.y - (scrollY * 0.2);
-                    
+
                     const dx = node.x - node2.x;
                     const dy = py - py2;
-                    const dist = Math.sqrt(dx*dx + dy*dy);
+                    const dist = Math.sqrt(dx * dx + dy * dy);
 
                     if (dist < CONNECTION_DIST) {
                         let opacity = 1 - (dist / CONNECTION_DIST);
-                        
+
                         // Boost opacity if near mouse
                         if (distToMouse < 200) {
                             opacity = Math.min(1, opacity + 0.3);
                         }
-                        
+
                         // Force mostly orthogonal or 45 deg angles aesthetically by picking color
                         const isOrthogonal = Math.abs(dx) < 10 || Math.abs(dy) < 10;
                         if (isOrthogonal) {
@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         } else {
                             ctx.strokeStyle = `rgba(122, 11, 34, ${opacity * 0.2})`; // Muted
                         }
-                        
+
                         ctx.beginPath();
                         ctx.moveTo(node.x, py);
                         ctx.lineTo(node2.x, py2);
@@ -272,16 +272,16 @@ document.addEventListener('DOMContentLoaded', () => {
             // Global Load Sequence
             const tl = gsap.timeline();
             tl.fromTo('.navbar', { y: -100, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power3.out' })
-              .fromTo('.logo', { x: -50, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: 'power3.out' }, "-=0.8")
-              .fromTo('.sidebar-left', { x: -50, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: 'power3.out' }, "-=0.8")
-              .fromTo('.header-cta', { x: 50, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: 'power3.out' }, "-=0.8")
-              .fromTo('.reveal-text', 
-                  { yPercent: 100 },
-                  { yPercent: 0, duration: 1.2, stagger: 0.05, ease: 'power4.out' },
-                  "-=0.6"
-              )
-              .fromTo('.hero-desc', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8 }, "-=0.8")
-              .fromTo('.hero .btn', { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.6, ease: 'back.out(1.5)' }, "-=0.6");
+                .fromTo('.logo', { x: -50, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: 'power3.out' }, "-=0.8")
+                .fromTo('.sidebar-left', { x: -50, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: 'power3.out' }, "-=0.8")
+                .fromTo('.header-cta', { x: 50, opacity: 0 }, { x: 0, opacity: 1, duration: 1, ease: 'power3.out' }, "-=0.8")
+                .fromTo('.reveal-text',
+                    { yPercent: 100 },
+                    { yPercent: 0, duration: 1.2, stagger: 0.05, ease: 'power4.out' },
+                    "-=0.6"
+                )
+                .fromTo('.hero-desc', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8 }, "-=0.8")
+                .fromTo('.hero .btn', { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.6, ease: 'back.out(1.5)' }, "-=0.6");
 
             // Scroll Reveals (replacing simple fade-in-up)
             const fadeElements = document.querySelectorAll('.fade-in-up');
@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 cards.forEach(card => {
                     // Parallax Image inside Card
                     const img = card.querySelector('.card-img');
-                    
+
                     if (img) {
                         gsap.to(img, {
                             scale: 1.15,
@@ -348,7 +348,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. Navigation Indicator
     const navItems = document.querySelectorAll('.nav-item');
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-    
+
     // Create animated indicator
     const navbar = document.querySelector('.navbar');
     if (navbar && navItems.length > 0) {
@@ -409,15 +409,15 @@ document.addEventListener('DOMContentLoaded', () => {
         themeToggle.addEventListener('click', () => {
             const isLight = document.body.classList.toggle('light-mode');
             localStorage.setItem('theme', isLight ? 'light' : 'dark');
-            
+
             // GSAP crossfade effect on body
             if (typeof gsap !== 'undefined') {
-                gsap.fromTo(document.body, 
-                    { opacity: 0.8 }, 
+                gsap.fromTo(document.body,
+                    { opacity: 0.8 },
                     { opacity: 1, duration: 0.4, ease: 'power2.out' }
                 );
             }
-            
+
             themeToggle.textContent = isLight ? '☀' : '☾';
         });
 
@@ -456,11 +456,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 const siblings = pill.parentElement.querySelectorAll('.tab-pill');
                 siblings.forEach(s => s.classList.remove('active'));
                 pill.classList.add('active');
-                
+
                 if (pill.parentElement.id === 'project-filters') {
                     const filter = pill.getAttribute('data-filter');
                     const cards = document.querySelectorAll('.project-card');
-                    
+
                     // Animate out
                     gsap.to(cards, {
                         opacity: 0,
@@ -478,7 +478,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             });
                             // Animate in
                             if (visibleCards.length > 0) {
-                                gsap.fromTo(visibleCards, 
+                                gsap.fromTo(visibleCards,
                                     { opacity: 0, scale: 0.95, y: 20 },
                                     { opacity: 1, scale: 1, y: 0, duration: 0.4, stagger: 0.1, ease: 'power2.out' }
                                 );
@@ -520,23 +520,23 @@ document.addEventListener('DOMContentLoaded', () => {
         if (content && typeof gsap !== 'undefined') {
             // Duplicate content for seamless loop
             content.innerHTML = content.innerHTML + content.innerHTML;
-            
+
             let proxy = { skew: 0 };
             let skewSetter = gsap.quickSetter(content, "skewX", "deg");
             let clamp = gsap.utils.clamp(-15, 15);
-            
+
             ScrollTrigger.create({
                 onUpdate: (self) => {
                     let skew = clamp(self.getVelocity() / -100);
                     if (Math.abs(skew) > Math.abs(proxy.skew)) {
                         proxy.skew = skew;
-                        gsap.to(proxy, {skew: 0, duration: 0.8, ease: "power3", overwrite: true, onUpdate: () => skewSetter(proxy.skew)});
+                        gsap.to(proxy, { skew: 0, duration: 0.8, ease: "power3", overwrite: true, onUpdate: () => skewSetter(proxy.skew) });
                     }
                 }
             });
-            
-            gsap.set(content, {transformOrigin: "center center", force3D: true});
-            
+
+            gsap.set(content, { transformOrigin: "center center", force3D: true });
+
             // Continuous loop
             gsap.to(content, {
                 xPercent: -50,
