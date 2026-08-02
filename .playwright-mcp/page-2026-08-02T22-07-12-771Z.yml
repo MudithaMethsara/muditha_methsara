@@ -1,0 +1,184 @@
+- generic [active] [ref=f11e1]:
+  - generic [ref=f11e2]: REDWOLF
+  - link "Start a project" [ref=f11e4] [cursor=pointer]:
+    - /url: contact.html
+  - navigation [ref=f11e5]:
+    - link "Home" [ref=f11e6] [cursor=pointer]:
+      - /url: index.html
+    - link "Projects" [ref=f11e7] [cursor=pointer]:
+      - /url: projects.html
+    - link "Services" [ref=f11e8] [cursor=pointer]:
+      - /url: services.html
+    - link "About" [ref=f11e9] [cursor=pointer]:
+      - /url: about.html
+    - link "Contact" [ref=f11e10] [cursor=pointer]:
+      - /url: contact.html
+  - complementary [ref=f11e13]:
+    - link "GitHub" [ref=f11e14] [cursor=pointer]:
+      - /url: https://github.com/MudithaMethsara
+    - link "Instagram" [ref=f11e16] [cursor=pointer]:
+      - /url: https://instagram.com/muditha_methsara
+    - link "X (Twitter)" [ref=f11e20] [cursor=pointer]:
+      - /url: https://x.com/M_Methsara_RW
+    - link "LinkedIn" [ref=f11e24] [cursor=pointer]:
+      - /url: https://www.linkedin.com/in/muditha-methsara-189a07230/
+  - navigation "Chapter counter" [ref=f11e29]:
+    - list [ref=f11e30]:
+      - listitem [ref=f11e31]:
+        - link "00 HERO" [ref=f11e32] [cursor=pointer]:
+          - /url: "#hero"
+          - generic [ref=f11e33]: "00"
+          - generic [ref=f11e34]: HERO
+      - listitem [ref=f11e35]:
+        - link "01 MANIFESTO" [ref=f11e36] [cursor=pointer]:
+          - /url: "#ch-manifesto"
+          - generic [ref=f11e37]: "01"
+          - generic [ref=f11e38]: MANIFESTO
+      - listitem [ref=f11e39]:
+        - link "02 EVIDENCE" [ref=f11e40] [cursor=pointer]:
+          - /url: "#featured-projects"
+          - generic [ref=f11e41]: "02"
+          - generic [ref=f11e42]: EVIDENCE
+      - listitem [ref=f11e43]:
+        - link "03 METRICS" [ref=f11e44] [cursor=pointer]:
+          - /url: "#ch-metrics"
+          - generic [ref=f11e45]: "03"
+          - generic [ref=f11e46]: METRICS
+      - listitem [ref=f11e47]:
+        - link "04 CAPABILITIES" [ref=f11e48] [cursor=pointer]:
+          - /url: "#services-mini"
+          - generic [ref=f11e49]: "04"
+          - generic [ref=f11e50]: CAPABILITIES
+      - listitem [ref=f11e51]:
+        - link "05 TRANSMIT" [ref=f11e52] [cursor=pointer]:
+          - /url: "#ch-cta"
+          - generic [ref=f11e53]: "05"
+          - generic [ref=f11e54]: TRANSMIT
+  - link "3D CORE IMMERSION SYS_ACTIVE // 2026" [ref=f11e55] [cursor=pointer]:
+    - /url: https://github.com/MudithaMethsara
+    - generic [ref=f11e56]:
+      - generic [ref=f11e57]: 3D CORE IMMERSION
+      - generic [ref=f11e58]: SYS_ACTIVE // 2026
+  - button "☾" [ref=f11e60] [cursor=pointer]
+  - button "↑" [ref=f11e61] [cursor=pointer]
+  - generic [ref=f11e62]:
+    - generic:
+      - generic: "LAT: 6.9271 N LON: 79.8612 E GRID_SECURE_99"
+      - generic: EVIDENCE_FILE_A.raw
+    - generic [ref=f11e63]:
+      - generic [ref=f11e64]: "TOP SECRET // CASE #2026 — COO @ SIVION AI"
+      - heading "MUDITHA METHSARA" [level=1] [ref=f11e65]:
+        - generic [ref=f11e66]: MUDITHA
+        - generic [ref=f11e67]: METHSARA
+      - paragraph [ref=f11e68]: Building robust back-end architectures and scalable systems. I don't just write code; I weave digital realities. My mission is to dismantle complex problems and reassemble them into elegant, scalable, and high-performance solutions.
+      - generic [ref=f11e69]:
+        - link "Start a project" [ref=f11e70] [cursor=pointer]:
+          - /url: contact.html
+        - link "Decrypt evidence board" [ref=f11e71] [cursor=pointer]:
+          - /url: projects.html
+    - status [ref=f11e72]:
+      - generic [ref=f11e74]: Available for work · 2026
+  - generic [ref=f11e75]:
+    - generic [ref=f11e76]:
+      - generic [ref=f11e77]: 01 // MANIFESTO
+      - generic [ref=f11e78]: ARCHITECTURE & PHILOSOPHY
+    - generic [ref=f11e80]:
+      - generic [ref=f11e81]: “
+      - blockquote [ref=f11e82]:
+        - paragraph [ref=f11e83]:
+          - text: I was drawn to a world where
+          - emphasis [ref=f11e84]: design meets backend logic
+          - text: — a space where I can
+          - emphasis [ref=f11e85]: engineer scalable realities
+          - text: and build high-performance systems from the ground up.
+      - generic [ref=f11e86]: M. METHSARA · REDWOLF ARCHITECT
+  - generic [ref=f11e91]:
+    - text: JAVA & SPRING BOOT •
+    - generic [ref=f11e92]: SCALABLE BACKEND
+    - text: • HIGH CONCURRENCY • SENTIENT AI •
+    - generic [ref=f11e93]: DISTRIBUTED SYSTEMS
+    - text: • CORE LOGIC • JAVA & SPRING BOOT •
+    - generic [ref=f11e94]: SCALABLE BACKEND
+    - text: • HIGH CONCURRENCY • SENTIENT AI •
+    - generic [ref=f11e95]: DISTRIBUTED SYSTEMS
+    - text: • CORE LOGIC •
+  - generic [ref=f11e96]:
+    - generic [ref=f11e97]:
+      - generic [ref=f11e98]: 02 // EVIDENCE BOARD
+      - generic [ref=f11e99]: CLASSIFIED CASE FILES
+    - generic [ref=f11e100]:
+      - heading "EVIDENCE DOSSIER" [level=2] [ref=f11e101]
+      - link "All evidence files" [ref=f11e102] [cursor=pointer]:
+        - /url: projects.html
+    - generic [ref=f11e103]:
+      - 'link "Hexcore Infrastructure PREUVE #01 // CORE SYSTEM HEXCORE Core Java Backend An advanced back-end infrastructure project focusing on core system logic and high-performance data processing." [ref=f11e104] [cursor=pointer]':
+        - /url: https://github.com/MudithaMethsara/Hexcore
+        - img "Hexcore Infrastructure" [ref=f11e105]
+        - generic [ref=f11e106]:
+          - generic [ref=f11e107]: "PREUVE #01 // CORE SYSTEM"
+          - heading "HEXCORE" [level=3] [ref=f11e108]
+          - generic [ref=f11e109]:
+            - generic [ref=f11e110]: Core
+            - generic [ref=f11e111]: Java
+            - generic [ref=f11e112]: Backend
+          - paragraph [ref=f11e113]: An advanced back-end infrastructure project focusing on core system logic and high-performance data processing.
+      - 'link "Civitech IMS PREUVE #02 // INVENTORY CIVITECH_IMS Inventory Management System Civitech Inventory Management System. A robust solution for tracking and managing assets and stock with high precision." [ref=f11e114] [cursor=pointer]':
+        - /url: https://github.com/MudithaMethsara/Civitech_IMS
+        - img "Civitech IMS" [ref=f11e115]
+        - generic [ref=f11e116]:
+          - generic [ref=f11e117]: "PREUVE #02 // INVENTORY"
+          - heading "CIVITECH_IMS" [level=3] [ref=f11e118]
+          - generic [ref=f11e119]:
+            - generic [ref=f11e120]: Inventory
+            - generic [ref=f11e121]: Management
+            - generic [ref=f11e122]: System
+          - paragraph [ref=f11e123]: Civitech Inventory Management System. A robust solution for tracking and managing assets and stock with high precision.
+  - generic [ref=f11e124]:
+    - generic [ref=f11e125]:
+      - generic [ref=f11e126]: 03 // SYSTEM DIAGNOSTIC
+      - generic [ref=f11e127]: BENCHMARKS & EXECUTION
+    - generic [ref=f11e128]:
+      - generic [ref=f11e129]:
+        - generic [ref=f11e130]: 10+
+        - generic [ref=f11e131]: Enterprise Systems Deployed
+      - generic [ref=f11e132]:
+        - generic [ref=f11e133]: 99.9%
+        - generic [ref=f11e134]: Concurrency Uptime
+      - generic [ref=f11e135]:
+        - generic [ref=f11e136]: 100K+
+        - generic [ref=f11e137]: Data Ops Processed / sec
+      - generic [ref=f11e138]:
+        - generic [ref=f11e139]: 03+
+        - generic [ref=f11e140]: Years COO Leadership
+  - generic [ref=f11e141]:
+    - generic [ref=f11e142]:
+      - generic [ref=f11e143]: 04 // ARCHITECTURAL CAPABILITIES
+      - generic [ref=f11e144]: FULL-STACK & AI SERVICES
+    - generic [ref=f11e145]:
+      - paragraph [ref=f11e146]: "With my expertise in Java & Spring Boot, scalable backend architectures, and AI-driven systems, I am ready to collaborate. My goal: to build a robust, next-generation digital solution that handles massive scale while looking like the future."
+      - link "Start a project" [ref=f11e147] [cursor=pointer]:
+        - /url: contact.html
+    - generic [ref=f11e148]:
+      - generic [ref=f11e150]:
+        - generic [ref=f11e151] [cursor=pointer]: FS
+        - heading "Full-Stack Systems" [level=3] [ref=f11e152]
+        - paragraph [ref=f11e153]: Building high-performance, scalable web applications from secure backends to dynamic frontend architectures using React and Node.js.
+      - generic [ref=f11e155]:
+        - generic [ref=f11e156] [cursor=pointer]: AI
+        - heading "Sentient AI" [level=3] [ref=f11e157]
+        - paragraph [ref=f11e158]: Crafting reliable machine learning pipelines, LLM integration, and intelligent predictive algorithms that learn and adapt.
+      - generic [ref=f11e160]:
+        - generic [ref=f11e161] [cursor=pointer]: ☁️
+        - heading "Cloud Sovereignty" [level=3] [ref=f11e162]
+        - paragraph [ref=f11e163]: Dominating AWS, Azure, and GCP to deploy resilient, autoscaling infrastructure that can withstand the modern digital tsunami.
+  - generic [ref=f11e165]:
+    - generic [ref=f11e166]: 05 // TRANSMIT ENCRYPTED MESSAGE
+    - heading "Ready to initiate transmission?" [level=2] [ref=f11e167]
+    - paragraph [ref=f11e168]: Tell me about your ideas and desires, let's discuss them and work together to build something iconic!
+    - link "Start a project" [ref=f11e169] [cursor=pointer]:
+      - /url: contact.html
+  - generic:
+    - generic: CAM_04 [REC] SIGNAL_STRONG
+    - generic: 03:37:12:73ISO 800 [LIVE_FEED]
+    - generic: SECURE NETWORK LINK
+    - generic: SYS. DIAGNOSTICSTABLE // 2026

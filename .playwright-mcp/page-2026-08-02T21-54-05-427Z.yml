@@ -1,0 +1,108 @@
+- generic [active] [ref=f3e1]:
+  - generic [ref=f3e2]: REDWOLF
+  - link "Start a project" [ref=f3e4] [cursor=pointer]:
+    - /url: contact.html
+  - navigation [ref=f3e5]:
+    - link "Home" [ref=f3e6] [cursor=pointer]:
+      - /url: index.html
+    - link "Projects" [ref=f3e7] [cursor=pointer]:
+      - /url: projects.html
+    - link "Services" [ref=f3e8] [cursor=pointer]:
+      - /url: services.html
+    - link "About" [ref=f3e9] [cursor=pointer]:
+      - /url: about.html
+    - link "Contact" [ref=f3e10] [cursor=pointer]:
+      - /url: contact.html
+  - complementary [ref=f3e12]:
+    - link "GitHub" [ref=f3e13] [cursor=pointer]:
+      - /url: https://github.com/MudithaMethsara
+    - link "Instagram" [ref=f3e15] [cursor=pointer]:
+      - /url: https://instagram.com/muditha_methsara
+    - link "X (Twitter)" [ref=f3e19] [cursor=pointer]:
+      - /url: https://x.com/M_Methsara_RW
+    - link "LinkedIn" [ref=f3e23] [cursor=pointer]:
+      - /url: https://www.linkedin.com/in/muditha-methsara-189a07230/
+  - complementary [ref=f3e28]:
+    - generic [ref=f3e29]: W.
+    - generic [ref=f3e30]: Honors
+  - button "☾" [ref=f3e31] [cursor=pointer]
+  - button "↑" [ref=f3e32] [cursor=pointer]
+  - generic [ref=f3e33]:
+    - generic [ref=f3e34]:
+      - generic [ref=f3e35]: WELCOME > PROJECTS
+      - heading "MY PROJECTS" [level=1] [ref=f3e36]
+      - generic [ref=f3e37]:
+        - generic [ref=f3e38] [cursor=pointer]: All
+        - generic [ref=f3e39] [cursor=pointer]: Backend
+        - generic [ref=f3e40] [cursor=pointer]: Java
+        - generic [ref=f3e41] [cursor=pointer]: Fullstack
+        - generic [ref=f3e42] [cursor=pointer]: Portfolio
+    - generic [ref=f3e43]:
+      - heading "All projects" [level=2] [ref=f3e44]
+      - button "See the photos" [ref=f3e45] [cursor=pointer]
+    - generic [ref=f3e46]:
+      - link "Civitech IMS CIVITECH_IMS INVENTORY / MANAGEMENT Inventory Management System Civitech Inventory Management System. A robust solution for tracking and managing assets and stock with high precision." [ref=f3e47] [cursor=pointer]:
+        - /url: https://github.com/MudithaMethsara/Civitech_IMS
+        - img "Civitech IMS" [ref=f3e48]
+        - generic [ref=f3e49]:
+          - heading "CIVITECH_IMS" [level=3] [ref=f3e50]
+          - generic [ref=f3e51]: INVENTORY / MANAGEMENT
+          - generic [ref=f3e52]:
+            - generic [ref=f3e53]: Inventory
+            - generic [ref=f3e54]: Management
+            - generic [ref=f3e55]: System
+          - paragraph [ref=f3e56]: Civitech Inventory Management System. A robust solution for tracking and managing assets and stock with high precision.
+      - link "Hexcore Infrastructure HEXCORE CORE JAVA / BACKEND Core Java Backend An advanced back-end infrastructure project focusing on core system logic and high-performance data processing." [ref=f3e57] [cursor=pointer]:
+        - /url: https://github.com/MudithaMethsara/Hexcore
+        - img "Hexcore Infrastructure" [ref=f3e58]
+        - generic [ref=f3e59]:
+          - heading "HEXCORE" [level=3] [ref=f3e60]
+          - generic [ref=f3e61]: CORE JAVA / BACKEND
+          - generic [ref=f3e62]:
+            - generic [ref=f3e63]: Core
+            - generic [ref=f3e64]: Java
+            - generic [ref=f3e65]: Backend
+          - paragraph [ref=f3e66]: An advanced back-end infrastructure project focusing on core system logic and high-performance data processing.
+      - link "Revenue Management REVENUE MANAGEMENT FINANCE / JAVA / MYSQL Finance Java MySQL A comprehensive system designed to track, manage, and optimize revenue streams for enterprise applications." [ref=f3e67] [cursor=pointer]:
+        - /url: https://github.com/MudithaMethsara/RevenueManagementSystem
+        - img "Revenue Management" [ref=f3e68]
+        - generic [ref=f3e69]:
+          - heading "REVENUE MANAGEMENT" [level=3] [ref=f3e70]
+          - generic [ref=f3e71]: FINANCE / JAVA / MYSQL
+          - generic [ref=f3e72]:
+            - generic [ref=f3e73]: Finance
+            - generic [ref=f3e74]: Java
+            - generic [ref=f3e75]: MySQL
+          - paragraph [ref=f3e76]: A comprehensive system designed to track, manage, and optimize revenue streams for enterprise applications.
+      - link "Servixau Platform SERVIXAU SERVICE AUSTRALIA / FULLSTACK Service Australia Fullstack Specialized service management platform tailored for the Australian market, integrating job scheduling and technician dispatch." [ref=f3e77] [cursor=pointer]:
+        - /url: https://github.com/MudithaMethsara/Servixau
+        - img "Servixau Platform" [ref=f3e78]
+        - generic [ref=f3e79]:
+          - heading "SERVIXAU" [level=3] [ref=f3e80]
+          - generic [ref=f3e81]: SERVICE AUSTRALIA / FULLSTACK
+          - generic [ref=f3e82]:
+            - generic [ref=f3e83]: Service
+            - generic [ref=f3e84]: Australia
+            - generic [ref=f3e85]: Fullstack
+          - paragraph [ref=f3e86]: Specialized service management platform tailored for the Australian market, integrating job scheduling and technician dispatch.
+      - link "IMS Core IMS CORE JAVA / DATABASE Java Database The core engine for a distributed inventory management system, emphasizing scalability and data integrity." [ref=f3e87] [cursor=pointer]:
+        - /url: https://github.com/MudithaMethsara/ims
+        - img "IMS Core" [ref=f3e88]
+        - generic [ref=f3e89]:
+          - heading "IMS CORE" [level=3] [ref=f3e90]
+          - generic [ref=f3e91]: JAVA / DATABASE
+          - generic [ref=f3e92]:
+            - generic [ref=f3e93]: Java
+            - generic [ref=f3e94]: Database
+          - paragraph [ref=f3e95]: The core engine for a distributed inventory management system, emphasizing scalability and data integrity.
+      - link "Portfolio v1 REDWOLF PORTFOLIO V1 PORTFOLIO / HTML / CSS Portfolio HTML CSS The original foundation of my personal portfolio and branding, capturing the evolution of my professional identity." [ref=f3e96] [cursor=pointer]:
+        - /url: https://github.com/MudithaMethsara/muditha_methsara
+        - img "Portfolio v1" [ref=f3e97]
+        - generic [ref=f3e98]:
+          - heading "REDWOLF PORTFOLIO V1" [level=3] [ref=f3e99]
+          - generic [ref=f3e100]: PORTFOLIO / HTML / CSS
+          - generic [ref=f3e101]:
+            - generic [ref=f3e102]: Portfolio
+            - generic [ref=f3e103]: HTML
+            - generic [ref=f3e104]: CSS
+          - paragraph [ref=f3e105]: The original foundation of my personal portfolio and branding, capturing the evolution of my professional identity.

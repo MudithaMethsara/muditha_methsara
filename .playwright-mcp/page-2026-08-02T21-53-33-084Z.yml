@@ -1,0 +1,112 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]: R
+    - generic [ref=e5]: e
+    - generic [ref=e6]: d
+    - generic [ref=e7]: W
+    - generic [ref=e8]: o
+    - generic [ref=e9]: l
+    - generic [ref=e10]: f
+  - generic [ref=e11]: REDWOLF
+  - link "Start a project" [ref=e13] [cursor=pointer]:
+    - /url: contact.html
+  - navigation [ref=e14]:
+    - link "Home" [ref=e15] [cursor=pointer]:
+      - /url: index.html
+    - link "Projects" [ref=e16] [cursor=pointer]:
+      - /url: projects.html
+    - link "Services" [ref=e17] [cursor=pointer]:
+      - /url: services.html
+    - link "About" [ref=e18] [cursor=pointer]:
+      - /url: about.html
+    - link "Contact" [ref=e19] [cursor=pointer]:
+      - /url: contact.html
+  - complementary [ref=e22]:
+    - link "GitHub" [ref=e23] [cursor=pointer]:
+      - /url: https://github.com/MudithaMethsara
+    - link "Instagram" [ref=e25] [cursor=pointer]:
+      - /url: https://instagram.com/muditha_methsara
+    - link "X (Twitter)" [ref=e29] [cursor=pointer]:
+      - /url: https://x.com/M_Methsara_RW
+    - link "LinkedIn" [ref=e33] [cursor=pointer]:
+      - /url: https://www.linkedin.com/in/muditha-methsara-189a07230/
+  - complementary [ref=e38]:
+    - generic [ref=e39]: W.
+    - generic [ref=e40]: Honors
+  - button "☾" [ref=e41] [cursor=pointer]
+  - button "↑" [ref=e42] [cursor=pointer]
+  - generic [ref=e44]:
+    - generic [ref=e45]: COO @ SIVION AI & ELITE BACK-END ARCHITECT
+    - heading "Muditha Methsara" [level=1] [ref=e46]:
+      - generic [ref=e47]: Muditha
+      - generic [ref=e49]: Methsara
+    - paragraph [ref=e51]: Building robust back-end architectures and scalable systems. I don't just write code; I weave digital realities. My mission is to dismantle complex problems and reassemble them into elegant, scalable, and high-performance solutions.
+    - link "Start a project" [ref=e52] [cursor=pointer]:
+      - /url: contact.html
+  - generic [ref=e53]:
+    - generic [ref=e54]:
+      - heading "Featured Projects" [level=2] [ref=e55]:
+        - generic [ref=e56]: Featured
+        - generic [ref=e58]: Projects
+      - link "All projects" [ref=e60] [cursor=pointer]:
+        - /url: projects.html
+    - generic [ref=e61]:
+      - link "Hexcore Infrastructure HEXCORE CORE JAVA / BACKEND Core Java Backend An advanced back-end infrastructure project focusing on core system logic and high-performance data processing." [ref=e62] [cursor=pointer]:
+        - /url: https://github.com/MudithaMethsara/Hexcore
+        - img "Hexcore Infrastructure" [ref=e63]
+        - generic [ref=e64]:
+          - heading "HEXCORE" [level=3] [ref=e65]
+          - generic [ref=e66]: CORE JAVA / BACKEND
+          - generic [ref=e67]:
+            - generic [ref=e68]: Core
+            - generic [ref=e69]: Java
+            - generic [ref=e70]: Backend
+          - paragraph [ref=e71]: An advanced back-end infrastructure project focusing on core system logic and high-performance data processing.
+      - link "Civitech IMS CIVITECH_IMS INVENTORY / MANAGEMENT Inventory Management System Civitech Inventory Management System. A robust solution for tracking and managing assets and stock with high precision." [ref=e72] [cursor=pointer]:
+        - /url: https://github.com/MudithaMethsara/Civitech_IMS
+        - img "Civitech IMS" [ref=e73]
+        - generic [ref=e74]:
+          - heading "CIVITECH_IMS" [level=3] [ref=e75]
+          - generic [ref=e76]: INVENTORY / MANAGEMENT
+          - generic [ref=e77]:
+            - generic [ref=e78]: Inventory
+            - generic [ref=e79]: Management
+            - generic [ref=e80]: System
+          - paragraph [ref=e81]: Civitech Inventory Management System. A robust solution for tracking and managing assets and stock with high precision.
+  - generic [ref=e82]:
+    - generic [ref=e83]:
+      - paragraph [ref=e84]: "With my expertise in Java & Spring Boot, scalable backend architectures, and AI-driven systems, I am ready to collaborate. My goal: to build a robust, next-generation digital solution that handles massive scale while looking like the future."
+      - link "Start a project" [ref=e85] [cursor=pointer]:
+        - /url: contact.html
+    - heading "My services" [level=2] [ref=e86]
+    - generic [ref=e87]:
+      - generic [ref=e89]:
+        - generic [ref=e90] [cursor=pointer]: FS
+        - heading "Full-Stack Systems" [level=3] [ref=e91]
+        - paragraph [ref=e92]: Building high-performance, scalable web applications from secure backends to dynamic frontend architectures using React and Node.js.
+      - generic [ref=e94]:
+        - generic [ref=e95] [cursor=pointer]: AI
+        - heading "Sentient AI" [level=3] [ref=e96]
+        - paragraph [ref=e97]: Crafting reliable machine learning pipelines, LLM integration, and intelligent predictive algorithms that learn and adapt.
+      - generic [ref=e99]:
+        - generic [ref=e100] [cursor=pointer]: ☁️
+        - heading "Cloud Sovereignty" [level=3] [ref=e101]
+        - paragraph [ref=e102]: Dominating AWS, Azure, and GCP to deploy resilient, autoscaling infrastructure that can withstand the modern digital tsunami.
+  - generic [ref=e104]:
+    - text: EVERY GREAT PROJECT BEGINS WITH A CONVERSATION. •
+    - generic [ref=e105]: CONTACT ME!
+    - text: • READY TO MAKE YOUR BRAND SHINE? • EVERY GREAT PROJECT BEGINS WITH A CONVERSATION. •
+    - generic [ref=e106]: CONTACT ME!
+    - text: • READY TO MAKE YOUR BRAND SHINE? •
+  - generic [ref=e108]:
+    - heading "Ready to bring your project to life?" [level=2] [ref=e109]:
+      - generic [ref=e110]: Ready
+      - generic [ref=e112]: to
+      - generic [ref=e114]: bring
+      - generic [ref=e116]: your
+      - generic [ref=e118]: project
+      - generic [ref=e120]: to
+      - generic [ref=e122]: life?
+    - paragraph [ref=e124]: Tell me about your ideas and desires, let's discuss them and work together!
+    - link "Start a project" [ref=e125] [cursor=pointer]:
+      - /url: contact.html

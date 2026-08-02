@@ -1,0 +1,134 @@
+- document [ref=f8e2]:
+  - complementary [ref=f8e3]:
+    - generic [ref=f8e4]:
+      - generic [ref=f8e5]: RW
+      - heading "M. Methsara" [level=2] [ref=f8e6]
+      - generic [ref=f8e7]: REDWOLF_EXECUTOR
+    - generic [ref=f8e8]:
+      - heading "Connectivity" [level=3] [ref=f8e9]
+      - generic [ref=f8e10]:
+        - generic [ref=f8e12]:
+          - strong [ref=f8e13]: Direct Link
+          - link "+94 72 612 5275" [ref=f8e14] [cursor=pointer]:
+            - /url: tel:+94726125275
+          - text: "[WhatsApp]"
+        - generic [ref=f8e16]:
+          - strong [ref=f8e17]: Email
+          - link "infomudithamethsara@gmail.com" [ref=f8e18] [cursor=pointer]:
+            - /url: mailto:infomudithamethsara@gmail.com
+        - generic [ref=f8e20]:
+          - strong [ref=f8e21]: Professional
+          - link "linkedin.com/in/muditha-methsara" [ref=f8e22] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/muditha-methsara-189a07230/
+        - generic [ref=f8e24]:
+          - strong [ref=f8e25]: Technical X
+          - link "@M_Methsara_RW" [ref=f8e26] [cursor=pointer]:
+            - /url: https://x.com/M_Methsara_RW
+        - generic [ref=f8e28]:
+          - strong [ref=f8e29]: Steam Gaming
+          - link "red_wolf_mudithamethsara" [ref=f8e30] [cursor=pointer]:
+            - /url: https://steamcommunity.com/id/red_wolf_mudithamethsara/
+        - generic [ref=f8e32]:
+          - strong [ref=f8e33]: Discord
+          - text: muditha_methsara
+        - generic [ref=f8e35]:
+          - strong [ref=f8e36]: Intelligence
+          - link "github.com/MudithaMethsara" [ref=f8e37] [cursor=pointer]:
+            - /url: https://github.com/MudithaMethsara
+        - generic [ref=f8e39]:
+          - strong [ref=f8e40]: Location
+          - text: Nittambuwa, Sri Lanka [6.0° N, 80.0° E]
+    - generic [ref=f8e41]:
+      - heading "Core Logic" [level=3] [ref=f8e42]
+      - generic [ref=f8e43]:
+        - generic [ref=f8e45]:
+          - generic [ref=f8e46]: Back-End Architecture
+          - generic [ref=f8e47]: 95%
+        - generic [ref=f8e51]:
+          - generic [ref=f8e52]: Operational Strategy
+          - generic [ref=f8e53]: 90%
+        - generic [ref=f8e57]:
+          - generic [ref=f8e58]: AI / System Logic
+          - generic [ref=f8e59]: 85%
+    - generic [ref=f8e62]:
+      - heading "Technological Stack" [level=3] [ref=f8e63]
+      - generic [ref=f8e64]:
+        - generic [ref=f8e65]: JAVA / SPRING BOOT
+        - generic [ref=f8e66]: PYTHON
+        - generic [ref=f8e67]: NODE.JS
+        - generic [ref=f8e68]: REACT
+        - generic [ref=f8e69]: MYSQL / MONGODB
+        - generic [ref=f8e70]: DOCKER
+        - generic [ref=f8e71]: AWS
+        - generic [ref=f8e72]: LINUX [ROOT]
+        - generic [ref=f8e73]: REST API / JWT
+        - generic [ref=f8e74]: GIT FLOW
+    - generic [ref=f8e75]:
+      - heading "Verified Certs" [level=3] [ref=f8e76]
+      - generic [ref=f8e77]:
+        - generic [ref=f8e78]: • Cyber-Security Introduction
+        - generic [ref=f8e80]: • OPSWAT ICIP [Critical Infra]
+        - generic [ref=f8e82]: • Linux LFS101 Foundation
+  - main [ref=f8e84]:
+    - generic [ref=f8e85]:
+      - heading "Chief Operating Officer & Back-End Architect" [level=1] [ref=f8e86]
+      - generic [ref=f8e87]:
+        - generic [ref=f8e88]: "Experience: 03+ CYCLES"
+        - generic [ref=f8e89]: "Focus: SCALABLE_AI_INFRA"
+        - generic [ref=f8e90]: "Status: EXECUTIVE_ACTIVE"
+    - paragraph [ref=f8e92]: Visionary Software Engineer and Technical Executive. As **Co-Founder & COO of Sivion AI**, I orchestrate the synergy between complex AI architectures and enterprise-level operations. Expert in forging secure, high-concurrency back-end systems that drive the future of digital automation.
+    - generic [ref=f8e93]:
+      - generic [ref=f8e94]:
+        - heading "// IMPACT" [level=2] [ref=f8e95]:
+          - generic [ref=f8e96]: //
+          - text: IMPACT
+        - list [ref=f8e97]:
+          - listitem [ref=f8e98]: "> Spearheading operational workflows for **Sivion AI** projects."
+          - listitem [ref=f8e99]: "> Engineered **enterprise-grade API frameworks** with 99.9% uptime."
+          - listitem [ref=f8e100]: "> Optimized database schemas for **Inventory & Revenue** systems."
+          - listitem [ref=f8e101]: "> Leading cross-functional engineering teams in agile environments."
+      - generic [ref=f8e102]:
+        - heading "// EXPERTISE" [level=2] [ref=f8e103]:
+          - generic [ref=f8e104]: //
+          - text: EXPERTISE
+        - list [ref=f8e105]:
+          - listitem [ref=f8e106]: "> Scalable Microservices (Spring Boot / Java)."
+          - listitem [ref=f8e107]: "> Technical Roadmap & Strategic Leadership."
+          - listitem [ref=f8e108]: "> End-to-End Encryption & Security Auditing."
+          - listitem [ref=f8e109]: "> Cloud-Native Orchestration & CI/CD Pipelines."
+    - generic [ref=f8e110]:
+      - heading "// LEADERSHIP & EXPERIENCE" [level=2] [ref=f8e111]:
+        - generic [ref=f8e112]: //
+        - text: LEADERSHIP & EXPERIENCE
+      - generic [ref=f8e113]:
+        - generic [ref=f8e114]:
+          - generic [ref=f8e115]:
+            - generic [ref=f8e116]:
+              - generic [ref=f8e117]: Co-Founder & Chief Operating Officer
+              - generic [ref=f8e118]: Sivion AI
+            - generic [ref=f8e119]: 2024 — PRESENT
+          - generic [ref=f8e120]: Directing technical operations and strategic direction. Bridging business goals with high-level engineering to deploy AI-integrated enterprise solutions.
+        - generic [ref=f8e121]:
+          - generic [ref=f8e122]:
+            - generic [ref=f8e123]:
+              - generic [ref=f8e124]: Senior Back-End Architect
+              - generic [ref=f8e125]: RedWolf Independent
+            - generic [ref=f8e126]: 2022 — 2024
+          - generic [ref=f8e127]: Designed and deployed robust systems including Civitech_IMS and Hexcore. Specialized in Java, Spring Boot, and secure data processing pipelines.
+    - generic [ref=f8e128]:
+      - heading "// ACADEMIC FOUNDATION" [level=2] [ref=f8e129]:
+        - generic [ref=f8e130]: //
+        - text: ACADEMIC FOUNDATION
+      - generic [ref=f8e132]:
+        - generic [ref=f8e133]:
+          - generic [ref=f8e134]:
+            - generic [ref=f8e135]: BEng(Hons) Software Engineering
+            - generic [ref=f8e136]: Java Institute for Advanced Technology
+          - generic [ref=f8e137]: 2022 — PRESENT
+        - generic [ref=f8e138]: Deep-dive into Enterprise Systems, Discrete Mathematics, and Distributed Computing architectures.
+    - generic [ref=f8e139]:
+      - link "[< RETURN_TO_SYSTEM ]" [ref=f8e140] [cursor=pointer]:
+        - /url: index.html
+      - generic [ref=f8e141]: "REDWOLF_SYSTEM_VERIFY: [PASS]"
+      - generic [ref=f8e142]: "SIG: M_METH_KOSGOLLAWATHTHA"
+      - generic [ref=f8e143]: "UPDATED: 2025.04.26"

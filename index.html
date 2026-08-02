@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REDWOLF - Full-Stack Architect & AI</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700;900&family=Playfair+Display:ital,wght@0,600;1,600&family=JetBrains+Mono:wght@400;500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -20,7 +20,10 @@
         </div>
     </div>
     <div class="cursor-dot"></div>
-    <!-- Global UI Elements -->
+    <div class="noise-overlay"></div>
+    <div class="grid-bg"></div>
+
+    <!-- Global Floating UI Elements -->
     <div class="logo">REDWOLF</div>
     <div class="header-cta"><a href="contact.html" class="btn btn-primary">Start a project</a></div>
 
@@ -36,6 +39,7 @@
         <div class="scroll-progress-bar"></div>
     </div>
 
+    <!-- Left Social Sidebar -->
     <aside class="sidebar-left">
         <a href="https://github.com/MudithaMethsara" target="_blank" class="social-icon" aria-label="GitHub">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
@@ -71,35 +75,103 @@
         </a>
     </aside>
 
-    <aside class="sidebar-right">
-        <div style="font-weight: 900; font-size: 1.2rem; text-align: center;">W.</div>
-        <div class="tab-vertical">Honors</div>
-    </aside>
+    <!-- Vertical Chapter Counter Navigation Rail -->
+    <nav class="chapter-rail" aria-label="Chapter counter">
+        <ol>
+            <li data-ch="hero" class="is-active"><a href="#hero"><span class="ch-num">00</span><span class="ch-label">HERO</span></a></li>
+            <li data-ch="manifesto"><a href="#ch-manifesto"><span class="ch-num">01</span><span class="ch-label">MANIFESTO</span></a></li>
+            <li data-ch="projects"><a href="#featured-projects"><span class="ch-num">02</span><span class="ch-label">EVIDENCE</span></a></li>
+            <li data-ch="metrics"><a href="#ch-metrics"><span class="ch-num">03</span><span class="ch-label">METRICS</span></a></li>
+            <li data-ch="services"><a href="#services-mini"><span class="ch-num">04</span><span class="ch-label">CAPABILITIES</span></a></li>
+            <li data-ch="contact"><a href="#ch-cta"><span class="ch-num">05</span><span class="ch-label">TRANSMIT</span></a></li>
+        </ol>
+    </nav>
+
+    <!-- Floating 3D Version Access Badge (Killian Herzer style) -->
+    <a href="https://github.com/MudithaMethsara" class="badge-3d-access" target="_blank" rel="noopener noreferrer">
+        <div class="badge-3d-text">
+            <div class="badge-3d-title">3D CORE IMMERSION</div>
+            <div class="badge-3d-status"><span class="badge-3d-dot"></span>SYS_ACTIVE // 2026</div>
+        </div>
+    </a>
 
     <button class="btn-icon theme-toggle">☾</button>
     <button class="btn-icon scroll-top">↑</button>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Section 00: Hero -->
+    <section class="hero" id="hero">
         <canvas id="neural-flow-canvas"></canvas>
 
+        <div class="floating-container" aria-hidden="true">
+            <div class="float-item f-loc">LAT: 6.9271 N<br/>LON: 79.8612 E<br/>GRID_SECURE_99</div>
+            <div class="float-item f-photo">
+                <img src="assets/hexcore_1785275443506.png" class="f-img" alt="Evidence preview"/>
+                <span>EVIDENCE_FILE_A.raw</span>
+            </div>
+        </div>
+
         <div class="fade-in-up">
-            <div class="label-small mb-2">COO @ SIVION AI & ELITE BACK-END ARCHITECT</div>
-            <h1 class="hero-title">Muditha Methsara</h1>
+            <div class="label-small mb-2">TOP SECRET // CASE #2026 — COO @ SIVION AI</div>
+            <h1 class="hero-title"><span class="serif" style="font-style: italic; color: white;">MUDITHA</span> METHSARA</h1>
             <p class="hero-desc text-muted">Building robust back-end architectures and scalable systems. I don't just
                 write code; I weave digital realities. My mission is to dismantle complex problems and reassemble them
                 into elegant, scalable, and high-performance solutions.
             </p>
-            <a href="contact.html" class="btn btn-primary">Start a project</a>
+            <div class="hero-actions">
+                <a href="contact.html" class="btn btn-primary">Start a project</a>
+                <a href="projects.html" class="btn btn-outline">Decrypt evidence board</a>
+            </div>
+        </div>
+
+        <div class="avail-badge" role="status">
+            <span class="dot"></span>
+            <span class="label">Available for work · 2026</span>
         </div>
     </section>
 
-    <!-- Featured Projects Section -->
-    <section id="featured-projects">
+    <!-- Section 01: Manifesto -->
+    <section class="chapter-section" id="ch-manifesto">
+        <div class="chapter-header fade-in-up">
+            <span class="ch-kicker">01 // MANIFESTO</span>
+            <span class="ch-meta">ARCHITECTURE & PHILOSOPHY</span>
+        </div>
+
+        <div class="manifesto-container fade-in-up">
+            <div class="manifesto-quote">
+                <span class="quote-mark">&ldquo;</span>
+                <blockquote>
+                    <p>
+                        I was drawn to a world where <em>design meets backend logic</em> — a space where
+                        I can <em>engineer scalable realities</em> and build high-performance systems from the ground up.
+                    </p>
+                </blockquote>
+                <div class="quote-author">
+                    <span class="author-line"></span>
+                    <span class="author-name">M. METHSARA · REDWOLF ARCHITECT</span>
+                    <span class="author-line"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- High-Impact Diagonal Ticker Marquee -->
+    <div class="marquee-container fade-in-up">
+        <div class="marquee-content">
+            JAVA & SPRING BOOT • <span>SCALABLE BACKEND</span> • HIGH CONCURRENCY • SENTIENT AI • <span>DISTRIBUTED SYSTEMS</span> • CORE LOGIC •
+        </div>
+    </div>
+
+    <!-- Section 02: Featured Evidence Board -->
+    <section id="featured-projects" class="chapter-section">
+        <div class="chapter-header fade-in-up">
+            <span class="ch-kicker">02 // EVIDENCE BOARD</span>
+            <span class="ch-meta">CLASSIFIED CASE FILES</span>
+        </div>
+
         <div class="section-header fade-in-up">
-            <h2>Featured Projects</h2>
+            <h2>EVIDENCE DOSSIER</h2>
             <a href="projects.html" class="btn btn-outline"
-                style="border-radius: 50px; padding: 8px 16px; font-size: 0.8rem;">All projects</a>
+                style="border-radius: 50px; padding: 10px 20px; font-size: 0.85rem;">All evidence files</a>
         </div>
 
         <div class="grid-2">
@@ -108,9 +180,8 @@
                 style="text-decoration: none; color: inherit; display: block;">
                 <img src="assets/hexcore_1785275443506.png" alt="Hexcore Infrastructure" class="card-img">
                 <div class="card-content">
+                    <div class="label-small" style="font-size: 0.7rem; color: var(--accent-cyan);">PREUVE #01 // CORE SYSTEM</div>
                     <h3>HEXCORE</h3>
-                    <div class="label-small" style="color: var(--text-secondary); letter-spacing: normal;">CORE JAVA /
-                        BACKEND</div>
                     <div class="tags">
                         <span class="tag">Core</span>
                         <span class="tag">Java</span>
@@ -126,9 +197,8 @@
                 style="text-decoration: none; color: inherit; display: block;">
                 <img src="assets/civitech_1785275453290.png" alt="Civitech IMS" class="card-img">
                 <div class="card-content">
+                    <div class="label-small" style="font-size: 0.7rem; color: var(--accent-cyan);">PREUVE #02 // INVENTORY</div>
                     <h3>CIVITECH_IMS</h3>
-                    <div class="label-small" style="color: var(--text-secondary); letter-spacing: normal;">INVENTORY /
-                        MANAGEMENT</div>
                     <div class="tags">
                         <span class="tag">Inventory</span>
                         <span class="tag">Management</span>
@@ -141,8 +211,40 @@
         </div>
     </section>
 
-    <!-- Services Mini Section -->
-    <section id="services-mini">
+    <!-- Section 03: Core Metrics & Diagnostic -->
+    <section id="ch-metrics" class="chapter-section">
+        <div class="chapter-header fade-in-up">
+            <span class="ch-kicker">03 // SYSTEM DIAGNOSTIC</span>
+            <span class="ch-meta">BENCHMARKS & EXECUTION</span>
+        </div>
+
+        <div class="metrics-grid grid-4 fade-in-up">
+            <div class="metric-card card">
+                <div class="metric-num" data-count="10">10+</div>
+                <div class="metric-label">Enterprise Systems Deployed</div>
+            </div>
+            <div class="metric-card card">
+                <div class="metric-num" data-count="99.9">99.9%</div>
+                <div class="metric-label">Concurrency Uptime</div>
+            </div>
+            <div class="metric-card card">
+                <div class="metric-num" data-count="100">100K+</div>
+                <div class="metric-label">Data Ops Processed / sec</div>
+            </div>
+            <div class="metric-card card">
+                <div class="metric-num" data-count="3">03+</div>
+                <div class="metric-label">Years COO Leadership</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 04: Services & Capabilities -->
+    <section id="services-mini" class="chapter-section">
+        <div class="chapter-header fade-in-up">
+            <span class="ch-kicker">04 // ARCHITECTURAL CAPABILITIES</span>
+            <span class="ch-meta">FULL-STACK & AI SERVICES</span>
+        </div>
+
         <div class="section-header fade-in-up">
             <p class="hero-desc" style="max-width: 800px; text-align: left; margin: 0;">With my expertise in
                 <b>Java & Spring Boot</b>, <b>scalable backend architectures</b>, and <b>AI-driven systems</b>, I am
@@ -153,12 +255,10 @@
             <a href="contact.html" class="btn btn-primary" style="margin-left: 20px;">Start a project</a>
         </div>
 
-        <h2 class="mb-4 fade-in-up">My services</h2>
-
-        <div class="grid-3">
+        <div class="grid-3 mt-4">
             <div class="card fade-in-up">
                 <div class="card-content">
-                    <div class="btn-icon mb-4" style="background: transparent;">FS</div>
+                    <div class="btn-icon mb-4" style="background: rgba(255, 46, 76, 0.15); color: var(--accent-primary);">FS</div>
                     <h3>Full-Stack Systems</h3>
                     <p class="text-muted mt-4" style="font-size: 0.9rem;">Building high-performance, scalable web
                         applications from secure backends to dynamic frontend architectures using React and Node.js.</p>
@@ -166,7 +266,7 @@
             </div>
             <div class="card fade-in-up">
                 <div class="card-content">
-                    <div class="btn-icon mb-4" style="background: transparent;">AI</div>
+                    <div class="btn-icon mb-4" style="background: rgba(0, 240, 255, 0.15); color: var(--accent-cyan);">AI</div>
                     <h3>Sentient AI</h3>
                     <p class="text-muted mt-4" style="font-size: 0.9rem;">Crafting reliable machine learning pipelines,
                         LLM integration, and intelligent predictive algorithms that learn and adapt.</p>
@@ -174,7 +274,7 @@
             </div>
             <div class="card fade-in-up">
                 <div class="card-content">
-                    <div class="btn-icon mb-4" style="background: transparent;">☁️</div>
+                    <div class="btn-icon mb-4" style="background: rgba(255, 255, 255, 0.15); color: white;">☁️</div>
                     <h3>Cloud Sovereignty</h3>
                     <p class="text-muted mt-4" style="font-size: 0.9rem;">Dominating AWS, Azure, and GCP to deploy
                         resilient, autoscaling infrastructure that can withstand the modern digital tsunami.</p>
@@ -183,18 +283,12 @@
         </div>
     </section>
 
-    <!-- Marquee CTA -->
-    <div class="marquee-container fade-in-up">
-        <div class="marquee-content">
-            EVERY GREAT PROJECT BEGINS WITH A CONVERSATION. • <span>CONTACT ME!</span> • READY TO MAKE YOUR BRAND SHINE?
-            •
-        </div>
-    </div>
-
-    <section class="hero" style="min-height: 50vh;">
+    <!-- Section 05: Call to Action -->
+    <section id="ch-cta" class="hero" style="min-height: 55vh;">
         <div class="fade-in-up">
-            <h2 class="hero-title" style="font-size: 3rem;">Ready to bring your project to life?</h2>
-            <p class="text-muted mb-4">Tell me about your ideas and desires, let's discuss them and work together!</p>
+            <div class="label-small mb-2">05 // TRANSMIT ENCRYPTED MESSAGE</div>
+            <h2 class="hero-title" style="font-size: 3.5rem;">Ready to initiate transmission?</h2>
+            <p class="text-muted mb-4" style="max-width: 550px; margin: 0 auto 30px;">Tell me about your ideas and desires, let's discuss them and work together to build something iconic!</p>
             <a href="contact.html" class="btn btn-primary">Start a project</a>
         </div>
     </section>

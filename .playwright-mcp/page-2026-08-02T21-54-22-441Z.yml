@@ -1,0 +1,59 @@
+- generic [active] [ref=f6e1]:
+  - generic [ref=f6e2]: REDWOLF
+  - navigation [ref=f6e3]:
+    - link "Home" [ref=f6e4] [cursor=pointer]:
+      - /url: index.html
+    - link "Projects" [ref=f6e5] [cursor=pointer]:
+      - /url: projects.html
+    - link "Services" [ref=f6e6] [cursor=pointer]:
+      - /url: services.html
+    - link "About" [ref=f6e7] [cursor=pointer]:
+      - /url: about.html
+    - link "Contact" [ref=f6e8] [cursor=pointer]:
+      - /url: contact.html
+  - complementary [ref=f6e10]:
+    - link "GitHub" [ref=f6e11] [cursor=pointer]:
+      - /url: https://github.com/MudithaMethsara
+    - link "Instagram" [ref=f6e13] [cursor=pointer]:
+      - /url: https://instagram.com/muditha_methsara
+    - link "X (Twitter)" [ref=f6e17] [cursor=pointer]:
+      - /url: https://x.com/M_Methsara_RW
+    - link "LinkedIn" [ref=f6e21] [cursor=pointer]:
+      - /url: https://www.linkedin.com/in/muditha-methsara-189a07230/
+  - complementary [ref=f6e26]:
+    - generic [ref=f6e27]: W.
+    - generic [ref=f6e28]: Honors
+  - button "☾" [ref=f6e29] [cursor=pointer]
+  - button "↑" [ref=f6e30] [cursor=pointer]
+  - generic [ref=f6e31]:
+    - generic [ref=f6e32]:
+      - generic [ref=f6e33]: WELCOME > CONTACT
+      - paragraph [ref=f6e34]: Let's discuss your next hyper-scale project. Fill out the form below and I'll establish a secure link shortly.
+      - generic [ref=f6e35]:
+        - generic [ref=f6e36]:
+          - generic [ref=f6e37]: EMAIL
+          - link "infomudithamethsara@gmail.com" [ref=f6e38] [cursor=pointer]:
+            - /url: mailto:infomudithamethsara@gmail.com
+        - generic [ref=f6e39]:
+          - generic [ref=f6e40]: WHATSAPP
+          - link "+94 72 612 5275" [ref=f6e41] [cursor=pointer]:
+            - /url: https://wa.me/94726125275
+    - generic [ref=f6e42]:
+      - generic [ref=f6e43]:
+        - heading "A need?" [level=2] [ref=f6e44]
+        - paragraph [ref=f6e45]: Whether you have a specific project in mind or just want to explore possibilities, I'm here to listen. Let's discuss how we can bring your ideas to life with tailored digital solutions.
+        - paragraph [ref=f6e46]: "* Your data is secure and will only be used to respond to your inquiry in accordance with our privacy policy."
+      - generic [ref=f6e48]:
+        - generic [ref=f6e49]:
+          - textbox "First name*" [ref=f6e51]
+          - textbox "Name*" [ref=f6e53]
+        - textbox "Company/Project Name" [ref=f6e55]
+        - textbox "Email*" [ref=f6e57]
+        - textbox "Message*" [ref=f6e59]
+        - button "Send" [ref=f6e60] [cursor=pointer]
+  - generic [ref=f6e62]:
+    - text: EVERY GREAT PROJECT BEGINS WITH A CONVERSATION. •
+    - generic [ref=f6e63]: CONTACT ME!
+    - text: • READY TO MAKE YOUR BRAND SHINE? • EVERY GREAT PROJECT BEGINS WITH A CONVERSATION. •
+    - generic [ref=f6e64]: CONTACT ME!
+    - text: • READY TO MAKE YOUR BRAND SHINE? •

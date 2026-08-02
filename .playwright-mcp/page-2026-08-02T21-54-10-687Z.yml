@@ -1,0 +1,59 @@
+- generic [active] [ref=f4e1]:
+  - generic [ref=f4e2]: REDWOLF
+  - link "Start a project" [ref=f4e4] [cursor=pointer]:
+    - /url: contact.html
+  - navigation [ref=f4e5]:
+    - link "Home" [ref=f4e6] [cursor=pointer]:
+      - /url: index.html
+    - link "Projects" [ref=f4e7] [cursor=pointer]:
+      - /url: projects.html
+    - link "Services" [ref=f4e8] [cursor=pointer]:
+      - /url: services.html
+    - link "About" [ref=f4e9] [cursor=pointer]:
+      - /url: about.html
+    - link "Contact" [ref=f4e10] [cursor=pointer]:
+      - /url: contact.html
+  - complementary [ref=f4e12]:
+    - link "GitHub" [ref=f4e13] [cursor=pointer]:
+      - /url: https://github.com/MudithaMethsara
+    - link "Instagram" [ref=f4e15] [cursor=pointer]:
+      - /url: https://instagram.com/muditha_methsara
+    - link "X (Twitter)" [ref=f4e19] [cursor=pointer]:
+      - /url: https://x.com/M_Methsara_RW
+    - link "LinkedIn" [ref=f4e23] [cursor=pointer]:
+      - /url: https://www.linkedin.com/in/muditha-methsara-189a07230/
+  - complementary [ref=f4e28]:
+    - generic [ref=f4e29]: W.
+    - generic [ref=f4e30]: Honors
+  - button "☾" [ref=f4e31] [cursor=pointer]
+  - button "↑" [ref=f4e32] [cursor=pointer]
+  - generic [ref=f4e33]:
+    - generic [ref=f4e34]:
+      - generic [ref=f4e35]: WELCOME > MY SERVICES
+      - heading "MY SERVICES" [level=1] [ref=f4e36]
+      - heading "Services" [level=1] [ref=f4e37]
+      - paragraph [ref=f4e38]: Comprehensive architectural solutions to elevate your digital presence.
+      - generic [ref=f4e39]:
+        - generic [ref=f4e40] [cursor=pointer]: Cloud Architecture
+        - generic [ref=f4e41] [cursor=pointer]: AI Integration
+        - generic [ref=f4e42] [cursor=pointer]: Full-Stack Development
+    - generic [ref=f4e43]:
+      - generic [ref=f4e44]:
+        - heading "Back-End Architecture & AI" [level=2] [ref=f4e45]
+        - paragraph [ref=f4e46]: Bring your systems to life with hyper-scale back-end architecture. I'll guide you through the creation of high-performing, resilient, and intelligent systems optimized for massive scale.
+        - list [ref=f4e47]:
+          - listitem [ref=f4e48]: ◆ Java & Spring Boot Development
+          - listitem [ref=f4e49]: ◆ REST API Design
+          - listitem [ref=f4e50]: ◆ AI Logic Integration
+          - listitem [ref=f4e51]: ◆ Database Optimization
+        - generic [ref=f4e52]:
+          - link "View the projects" [ref=f4e53] [cursor=pointer]:
+            - /url: projects.html
+          - link "Start a project" [ref=f4e54] [cursor=pointer]:
+            - /url: contact.html
+      - generic [ref=f4e55]:
+        - img "Website Showcase Mockup" [ref=f4e56]
+        - generic [ref=f4e57]:
+          - generic [ref=f4e58]: Responsive
+          - generic [ref=f4e59]: SEO
+          - generic [ref=f4e60]: Fast Loading
